@@ -1,0 +1,52 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/tests/animation
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+test_animation.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+1afacab33b08171673e791423179591f
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_wipe.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+24aef7a263efb18f19db001087427c62
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_accelleration_demo.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+e4d47bc968debf69fb83d0e865b658cb
+2007-09-19T06:53:55.028159Z
+341
+mo
+

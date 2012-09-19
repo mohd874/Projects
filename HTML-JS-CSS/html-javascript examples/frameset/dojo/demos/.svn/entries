@@ -1,0 +1,90 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/demos
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+screenshots
+dir
+
+demoEngine.css
+file
+
+
+
+
+2007-03-15T22:04:10.000000Z
+45b043ec42816fc8d9a8bbc12e00ebf6
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+viewDemo.png
+file
+
+
+
+
+2007-03-15T22:04:10.000000Z
+2f06891dadd21c0bf357da600c38c1c7
+2007-09-19T06:53:55.028159Z
+341
+mo
+has-props
+
+widget
+dir
+
+gfx
+dir
+
+storage
+dir
+
+demoRegistry.json
+file
+
+
+
+
+2007-03-15T22:04:10.000000Z
+91692b2b3fc92df32b3f8058b28a0c9d
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+dojoDemos.gif
+file
+
+
+
+
+2007-03-15T22:04:10.000000Z
+3de1ea0a3e4078667be87122c1b90550
+2007-09-19T06:53:55.028159Z
+341
+mo
+has-props
+
+de2.html
+file
+
+
+
+
+2007-03-15T22:04:10.000000Z
+a87b21ee22176a1d44f1662635829e49
+2007-09-19T06:53:55.028159Z
+341
+mo
+

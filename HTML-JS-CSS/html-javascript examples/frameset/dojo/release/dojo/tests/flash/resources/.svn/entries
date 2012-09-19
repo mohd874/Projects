@@ -1,0 +1,68 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/release/dojo/tests/flash/resources
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+HelloWorld_version6.swf
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+60b4b8a63153fda3493763248047ed93
+2007-09-19T06:53:55.028159Z
+341
+mo
+has-props
+
+HelloWorld_version8.swf
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+9631d62fec4685287ff7438e3f3ad443
+2007-09-19T06:53:55.028159Z
+341
+mo
+has-props
+
+UnitTestsComm_version6.swf
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+ebbed7ec058bc701b17878da3fdf025f
+2007-09-19T06:53:55.028159Z
+341
+mo
+has-props
+
+UnitTestsComm_version8.swf
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+46b7852f3472214d1c876931fedb0dc8
+2007-09-19T06:53:55.028159Z
+341
+mo
+has-props
+

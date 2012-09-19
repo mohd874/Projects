@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title></title>
+<!--This Script is for collapsing the frames-->
+<script type="text/javascript">
+
+/***********************************************
+* Collapsible Frames script- © Dynamic Drive (www.dynamicdrive.com)
+* This notice must stay intact for use
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var columntype=""
+var defaultsetting=""
+
+function getCurrentSetting(){
+if (document.getElementById("innerFrame"))
+return (document.getElementById("innerFrame").cols)? document.getElementById("innerFrame").cols : document.getElementById("innerFrame").rows
+}
+
+function setframevalue(coltype, settingvalue){
+if (coltype=="rows")
+document.getElementById("innerFrame").rows=settingvalue
+else if (coltype=="cols")
+document.getElementById("innerFrame").cols=settingvalue
+}
+
+function resizeFrame(contractsetting){
+if (getCurrentSetting()!=defaultsetting)
+setframevalue(columntype, defaultsetting)
+else
+setframevalue(columntype, contractsetting)
+}
+
+function init(){
+if (!document.all && !document.getElementById) return;
+if (document.getElementById("innerFrame")!=null){
+columntype=(document.getElementById("innerFrame").cols)? "cols" : "rows"
+defaultsetting=(document.getElementById("innerFrame").cols)? document.getElementById("innerFrame").cols : document.getElementById("innerFrame").rows
+}
+else
+setTimeout("init()",100)
+}
+
+setTimeout("init()",100)
+
+</script>
+</head>
+<align="center">
+<frameset rows="57,*" cols="*"  frameborder="no" border="0" id="outerFrame" name="outerFrame">
+	<frame src="page2.html" name="topFrame" id="topFrame" title="topFrame" />
+	<frameset rows="*" cols="15%,80%" frameborder="no" border="0" id="innerFrame" name="innerFrame">
+		<frame src="page3.html" name="leftFrame" noresize="noresize" id="leftFrame" title="leftFrame" scrolling="no" />
+		<frame src="page4.html" name="mainFrame" id="mainFrame" title="measure main" />
+	</frameset>
+</frameset>
+<noframes>
+<body>
+Browser must support frames
+</body>
+</noframes>
+</html>

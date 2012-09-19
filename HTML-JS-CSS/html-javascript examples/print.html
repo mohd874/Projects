@@ -1,0 +1,41 @@
+<html>
+
+<head>
+
+<script language="javascript">
+function Clickheretoprint()
+{ 
+  var disp_setting="toolbar=yes,location=no,directories=yes,menubar=yes,"; 
+      disp_setting+="scrollbars=yes,resizable"; 
+  var content_vlue = document.getElementById("print_content").innerHTML; 
+  
+  var docprint=window.open("","",disp_setting); 
+   docprint.document.open(); 
+   docprint.document.write('<html><head><title>Inel Power System</title>'); 
+   docprint.document.write('</head><body onLoad="self.print()"><center>');          
+   docprint.document.write(content_vlue);          
+   docprint.document.write('</center></body></html>'); 
+   docprint.document.close(); 
+   docprint.focus(); 
+   window.close();
+}
+</script>
+
+</head>
+
+
+<body>
+
+<a href="javascript:Clickheretoprint()"> Click here to print</a>
+<br><br><br>
+
+<p>This part be ignored</p>
+
+<div id="print_content">	
+<p>Only this part will be printed</p>
+</div>
+
+<p>This part will be ignored</p>
+</body>
+
+</html>

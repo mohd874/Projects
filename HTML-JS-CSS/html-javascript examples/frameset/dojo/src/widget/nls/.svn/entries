@@ -1,0 +1,73 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/src/widget/nls
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+zh-cn
+dir
+
+DropdownDatePicker.js
+file
+
+
+
+
+2007-03-15T22:18:12.000000Z
+e81a2d682be80ba7aa8fa8a6cff2735f
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+DropdownTimePicker.js
+file
+
+
+
+
+2007-03-15T22:18:12.000000Z
+cfe9598e3835287146776d25af8380b4
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+validate.js
+file
+
+
+
+
+2007-03-15T22:18:12.000000Z
+7b9f6aff6239944bee25fe9c62098e71
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+fr
+dir
+
+TimePicker.js
+file
+
+
+
+
+2007-03-15T22:18:12.000000Z
+50ecc6d06788682b88762f487d9f3167
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+ja
+dir
+

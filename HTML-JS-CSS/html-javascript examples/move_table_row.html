@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+function function1() {
+    document.forms[0].myTable.moveRow(-1, 2);
+}
+</script>
+<form name="form1" id="form1">
+<table id="myTable" border="1" cellspacing="5" cellpadding="5">
+    <tr>
+        <td>First Row</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>Second Row</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td style="background-color:blue">Third Row</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td style="background-color:red">Fourth Row</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+<button type="button" onclick="function1();">Move Row</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/tests/widget/deprecated
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+test_Button_lots2.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+079274e7bf61957ccc0fd7eb47e9b661
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_Button_lots.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+7798e5848cc6cb7f1685af76b593f61e
+2007-09-19T06:53:55.028159Z
+341
+mo
+

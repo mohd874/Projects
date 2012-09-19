@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+
+<script type="text/javascript" src="animatedcollapse.js">
+
+/***********************************************
+* Animated Collapsible DIV- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+*
+*
+*This script was downloaded from "http://www.dynamicdrive.com/dynamicindex17/animatedcollapse.htm"
+***********************************************/
+
+</script>
+</head>
+
+<body>
+
+<p><b>Example 1:</b></p>
+
+<a href="javascript:collapse1.slidedown()">Slide Down</a> || <a href="javascript:collapse1.slideup()">Slide Up</a>
+<div id="dog" style="width: 300px; height: 110px; background-color: #99E0FB;">
+
+<!--Your DIV content as follows -->
+<h3>Content inside DIV!</h3>
+<h4>Note: CSS height attribute defined</h4>
+
+</div>
+
+<script type="text/javascript">
+
+//Syntax: var uniquevar=new animatedcollapse("DIV_id", animatetime_milisec, enablepersist(true/fase), [initialstate] )
+var collapse1=new animatedcollapse("dog", 1000, false)
+
+</script>
+
+
+
+<p><b>Example 2:</b></p>
+
+<a href="javascript:collapse2.slideit()">Show/ Hide DIV</a>
+<div id="cat" style="width: 300px; background-color: #99E0FB;">
+
+<!--Your DIV content as follows. Note to add CSS padding or margins, do it inside a DIV within the Collapsible DIV -->
+<div style="padding: 0 5px">
+<h3>Content inside DIV!</h3>
+<h3>Content inside DIV!</h3>
+<h4>Note: No CSS height attribute defined. Persistence enabled.</h4>
+</div>
+
+</div>
+
+<script type="text/javascript">
+
+//Syntax: var uniquevar=new animatedcollapse("DIV_id", animatetime_milisec, enablepersist(true/fase), [initialstate] )
+var collapse2=new animatedcollapse("cat", 800, true)
+
+</script>
+
+
+
+
+<p><b>Example 3:</b></p>
+
+<a href="javascript:collapse3.slidedown()">Slide Down</a> || <a href="javascript:collapse3.slideup()">Slide Up</a>
+<div id="fish" style="width: 300px; height: 150px; background-color: #99E0FB;">
+
+<!--Your DIV content as follows -->
+<h3>Content inside DIV!</h3>
+<h4>Note: DIV set not to collapse initially. Note that if "enablepersist" is enabled, cookie value overrides this setting.</h4>
+
+</div>
+
+<script type="text/javascript">
+
+//Syntax: var uniquevar=new animatedcollapse("DIV_id", animatetime_milisec, enablepersist(true/fase), [initialstate] )
+var collapse3=new animatedcollapse("fish", 1000, false, "block")
+
+</script>
+
+</body>
+</html>

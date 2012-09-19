@@ -1,0 +1,55 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/tests/gfx/images
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+rect.png
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+6528f7a97068cc9921a42bab988a7bf5
+2007-09-19T06:53:55.028159Z
+341
+mo
+has-props
+
+placeholder.png
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+881fb6100006343a7886ef7f6e793731
+2007-09-19T06:53:55.028159Z
+341
+mo
+has-props
+
+error.png
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+37adb1c77c68720bcb4f62505b99561a
+2007-09-19T06:53:55.028159Z
+341
+mo
+has-props
+

@@ -1,0 +1,39 @@
+div{
+	text-align: center;
+	vertical-align: middle;
+}
+
+.img {
+	height:60px;
+	width:60px;
+	cursor: pointer;		
+}
+.block, .opened, .solved {
+	float:left;
+	height:60px;
+	width:60px;
+	cursor: pointer;
+	background-color: #FFFFFF;	
+}
+
+.solved{
+	color:#000000;
+	cursor: default;
+}
+
+.block{
+	color:#000000;
+}
+
+.opened {
+	color:#000000;
+}
+
+.main{
+	border:1px solid black;
+	color:#666666;
+	height:240px;
+	width:240px;
+	background-image: url(../images/smile.ico);
+	background-repeat: repeat;
+}

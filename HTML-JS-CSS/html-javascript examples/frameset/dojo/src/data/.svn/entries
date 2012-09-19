@@ -1,0 +1,70 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/src/data
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+OpmlStore.js
+file
+
+
+
+
+2007-03-15T22:18:04.000000Z
+a68b5300fdd9f459a83a1b205b0048ba
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+CsvStore.js
+file
+
+
+
+
+2007-03-15T22:18:04.000000Z
+8342e19bac35fba9b662b67dc149a976
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+RdfStore.js
+file
+
+
+
+
+2007-03-15T22:18:02.000000Z
+4ff4d737ef7cdb4c3cd3f7243f54e2c0
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+YahooStore.js
+file
+
+
+
+
+2007-03-15T22:18:04.000000Z
+1c8d3fddff2d8665a834cc3d4c56eff5
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+core
+dir
+
+old
+dir
+

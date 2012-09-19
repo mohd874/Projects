@@ -1,0 +1,40 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/demos/storage
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+editor.js
+file
+
+
+
+
+2007-03-15T22:18:24.000000Z
+e48c376124b38996670ac1a0377800be
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+editor.html
+file
+
+
+
+
+2007-03-15T22:04:10.000000Z
+4816d6f6d362e32a324108758efabe3f
+2007-09-19T06:53:55.028159Z
+341
+mo
+

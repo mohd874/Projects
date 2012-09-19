@@ -1,0 +1,70 @@
+<HTML>
+<HEAD>
+<TITLE>Forwarding web-page demo</TITLE>
+<META  name="description" content="Sample program how to forward a web page">
+<META NAME="Author" CONTENT="Chris Jacobi">
+<META NAME="keywords" content="javascript, back, forward, history, moving, link, boy, scout, council">
+
+<!-- Standard forwarding mechanism.
+   We need this in case our clever javascript mechanism fails...
+   We recommend a delay of a few seconds, so that the user has time to hit the back button
+-->
+<META Http-equiv="refresh" Content="8; Url=http://www.scoutway.net/web/forwarding/base.html">
+
+</HEAD>
+
+<BODY  BGCOLOR="#FFFFFF">
+
+<!-- #BeginLibraryItem "/Library/scoutwaytop.lbi" --><table width="100%" border=0>
+<tr>
+    <td width="20%" align = "center"><A HREF="../../jacobi/jacobi-scouts.html" target="_top"><img src="../../im/smiley.gif" width = 28 height = 28 alt = " " border="0"></A></td> 
+    <td width="20%" align = "center"><A HREF="/unit/pack6/pack6.html" target="_top"><img src="../../im/tiny6.gif" width = 17 height = 31 alt = "6" border="0"></A></td>
+    <td width="20%" align = "center"><A HREF="/pacsky/pacsky.html" target="_top"><img src="../../im/psc-small.gif" width = 72 height = 30 alt = "psc" border="0"></a></td>
+    <td width="20%" align = "center"><img src="../../im/bsalogo.gif" width = 41 height = 41 alt = " "></td>
+    <td width="20%" align = "center"><img src="../../im/wosm.gif" width = 32 height = 32 alt = " "></td>
+</tr> 
+</table><!-- #EndLibraryItem --> 
+<H1>Forwarding demo. </H1>
+<BR>
+In case you have javascript enabled and were not backtracking, you will be 
+forwarded to <A HREF="base.html">http://www.sccoutway/web/forwarding/base.html</A>. 
+(That happens to be from where you probably came from). 
+<P> If you came here by backtracking however, no forwarding happens. You could 
+  simply continue with back tracking. 
+<P><i>View the source of this page to see how it works. &nbsp;Please give 
+  me credit when you use my little hack. </i><i>If forwarding should fail, 
+  <a href="base.html">that</a> is probably where you came from. Sorry but 
+  this mechanism does not work with all browsers. </i>
+<hr>
+<p>&nbsp; 
+<p>
+
+<!-- Simple forwarding mechanism by Chris Jacobi -->
+<FORM name="memory">
+   <INPUT type="text" name="fld" size="1" value="."> <!-- serves as memory -->
+</FORM> 
+<SCRIPT language="JavaScript">
+<!-- 
+if (document.memory.fld.value.length > 0) {
+   document.memory.fld.value = "";
+   if (navigator.appVersion.indexOf("MSIE 5.5") >= 0) {
+      document.write("Sorry, we can not forward you immediately (because the MSIE 5.5 browser will not support coming back). However we will forward you in a few seconds.\n");
+   } else {
+      top.location = "http://www.scoutway.net/web/forwarding/base.html";
+   }
+}
+// --> 
+</SCRIPT>
+
+
+<p><p>
+<a href="http://www.scoutway.net/scoutway.html">scoutway.net</a> </p>
+</BODY></HTML>
+
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+<chart palette='3' caption='Effort' lineThickness='1' showValues='0'
+	yAxisMaxValue='145.0' yAxisMinValue='0.0' numDivLines='5'
+	formatNumberScale='0' divLineAlpha='20' divLineColor='06fff0'
+	vDivLineIsDashed='1' vDivLineDashLen='2' vDivLineDashGap='2'
+	divLineIsDashed='0' showAlternateVGridColor='1' labelStep='1'
+	showYAxisValues='1' numVDivLines='12' chartRightMargin='35'
+	connectNullData='1'>
+	<categories>
+		<category label=' ' />
+		<category label='J' />
+		<category label='F' />
+		<category label='M' />
+		<category label='A' />
+		<category label='M' />
+		<category label='J' />
+		<category label='J' />
+		<category label='A' />
+		<category label='S' />
+		<category label='O' />
+		<category label='N' />
+		<category label='D' />
+		<category label='.' />
+	</categories>
+	<dataset seriesName='Baseline' renderAs='Line' color='2452fb'>
+		<set />
+		<set value='0.0' drawAnchors='0' />
+		<set value='0.0' drawAnchors='0' />
+		<set value='0.0' drawAnchors='0' />
+		<set value='0.0' drawAnchors='0' />
+		<set value='0.0' drawAnchors='0' />
+		<set value='0.0' drawAnchors='0' />
+		<set value='0.0' drawAnchors='0' />
+		<set value='0.0' drawAnchors='0' />
+		<set value='0.0' drawAnchors='0' />
+		<set value='126.0' />
+		<set value='0.0' drawAnchors='0' />
+		<set value='0.0' drawAnchors='0' />
+		<set />
+	</dataset>
+	<dataset seriesName='Actual' color='f606ff'
+		anchorBorderColor='f606ff' anchorBgColor='f606ff'>
+		<set />
+		<set />
+		<set />
+		<set />
+		<set />
+		<set />
+		<set />
+		<set />
+		<set />
+		<set />
+		<set value='0.0' />
+		<set />
+		<set />
+		<set />
+	</dataset>
+	<styles>
+		<definition>
+			<style name='CaptionFont' type='font' size='12' />
+		</definition>
+		<application>
+			<apply toObject='CAPTION' styles='CaptionFont' />
+			<apply toObject='SUBCAPTION' styles='CaptionFont' />
+		</application>
+	</styles>
+</chart>

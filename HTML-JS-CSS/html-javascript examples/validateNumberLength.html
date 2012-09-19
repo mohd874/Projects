@@ -1,0 +1,26 @@
+<HTML>
+<Head>
+<Script Language=JavaScript>
+
+function validateNumber() {
+	var number = document.getElementById('input1').value;
+	
+	if(number.length > 3){
+		alert("number is bigger that three");
+		return;
+	}else if(isNaN(number)){
+		alert("number is NaN");
+	}else{
+		alert("number is valid: "+number);
+	}
+}
+
+</Script>
+
+</Head>
+<Body>
+<strong>This example will show you how to validate a number</strong><br>
+<input type=text value="0" id="input1" name="input1"/>
+<input type=button value="validate" onclick="javascript:validateNumber()"/>
+</Body>
+</HTML>

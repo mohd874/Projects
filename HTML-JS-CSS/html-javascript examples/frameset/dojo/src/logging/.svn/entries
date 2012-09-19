@@ -1,0 +1,52 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/src/logging
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+__package__.js
+file
+
+
+
+
+2007-03-15T22:18:10.000000Z
+17f07907a56ad6d520ad2ab7a473ade0
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+Logger.js
+file
+
+
+
+
+2007-03-15T22:18:10.000000Z
+1bbd0ae2dacfaa9592f77f35b55aa556
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+ConsoleLogger.js
+file
+
+
+
+
+2007-03-15T22:18:10.000000Z
+496d3848801966526be482878959aaa4
+2007-09-19T06:53:55.028159Z
+341
+mo
+

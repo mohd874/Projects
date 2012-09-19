@@ -1,0 +1,28 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/src/i18n/calendar/nls/es
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+gregorian.js
+file
+
+
+
+
+2007-03-15T22:18:04.000000Z
+877cdc29c3c02faf23176c6d8e68ca1f
+2007-09-19T06:53:55.028159Z
+341
+mo
+

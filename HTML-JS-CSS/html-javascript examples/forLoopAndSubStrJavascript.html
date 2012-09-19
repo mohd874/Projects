@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script>
+function getAllDivsWithNameDiv(){
+	var toReturn = "";
+	for (var i = 0; i < document.form1.childNodes.length; i++)   {
+        var child = document.form1.childNodes[i];
+        var childId = child.id;
+        
+        if (childId != null && childId.substr(0, 3) == "Div") {
+            toReturn += child.innerHTML+child.value+"<br />";
+        }
+        document.getElementById('TestField').innerHTML = toReturn;
+        
+    }
+
+}
+</script>
+<form id="form1" name="form1" method="post" action="">
+  <div id="Div1">Content for  id "Div1" Goes Here</div><br />
+  <div id="Div2">This is "Div2" content</div><br />
+  <div id="Div_text">Some Text</div><br />
+  <div id="Di1v">This should not apper</div><br />
+  <input type="text" name="textfield" id="Div5" value="This is a TextField" />
+  <br />
+  <br />
+  <br />
+  <a  name="link1" id="link1" onclick="getAllDivsWithNameDiv()">Click Here</a>
+  <div id="TestField" name="TestField"></div>
+</form>
+</body>
+</html>

@@ -1,0 +1,64 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/tests/date
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+test_serialize.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+b2aa64f787db578f8685b2b8efc38354
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_format.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+638f316d32685677ce626c1340b36fda
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_supplemental.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+7b4b2a04411395bff413243ce39bcfa3
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_date.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+139ac208a93cb06a79a168c27a7d716f
+2007-09-19T06:53:55.028159Z
+341
+mo
+

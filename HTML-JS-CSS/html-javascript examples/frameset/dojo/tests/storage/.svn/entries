@@ -1,0 +1,43 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/tests/storage
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+test_storage.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+09cb5aa3cbded7236f868e5e3981fb62
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+resources
+dir
+
+storage_test.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+58d6f35edb73808d9f2864b030bb4d7f
+2007-09-19T06:53:55.028159Z
+341
+mo
+

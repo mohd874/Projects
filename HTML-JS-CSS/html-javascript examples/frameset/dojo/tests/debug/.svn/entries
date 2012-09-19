@@ -1,0 +1,52 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/tests/debug
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+test_debug.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+341f4c8cf615bfa1192c726f6fe653dd
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_debug_console.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+1f803056a7b7ca026b8cfb19a2f72aaf
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_debug_Firebug.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+86631cfe572f97e78c6a1408e29ec977
+2007-09-19T06:53:55.028159Z
+341
+mo
+

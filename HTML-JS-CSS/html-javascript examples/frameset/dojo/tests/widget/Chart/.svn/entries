@@ -1,0 +1,64 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/tests/widget/Chart
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+test_bar.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+d149813a8f2f45e2c63208be0281ce01
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_line.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+5b656912102472da143788636b5d3c7f
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_area.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+b731253d070782eff0dcfa8d24adf580
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_fromScript.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+e3bbda5b26abc179eb885356b73dd73c
+2007-09-19T06:53:55.028159Z
+341
+mo
+

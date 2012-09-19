@@ -1,0 +1,52 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/src/charting/vml
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+Axis.js
+file
+
+
+
+
+2007-03-15T22:18:08.000000Z
+c654b82357d686dbd0e2d6a1de8a516b
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+PlotArea.js
+file
+
+
+
+
+2007-03-15T22:18:08.000000Z
+fa76882634739e0fa2b0865f49848473
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+Plotters.js
+file
+
+
+
+
+2007-03-15T22:18:10.000000Z
+55024e50590bad4e9a73f6645a260b94
+2007-09-19T06:53:55.028159Z
+341
+mo
+

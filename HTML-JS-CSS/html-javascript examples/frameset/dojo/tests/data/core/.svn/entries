@@ -1,0 +1,40 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/tests/data/core
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+test_RemoteStore.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+1c4462caf02baa96a1eebb6d2379f585
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_RemoteStore.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+97bcf695f77ac2ac15abb7af20b4c3e6
+2007-09-19T06:53:55.028159Z
+341
+mo
+

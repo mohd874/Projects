@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>
+Hide and Show Divs using radio buttons
+</title>
+
+<script>
+function showAndHide(show,hide){
+	document.getElementById(show).style.display = 'block';
+	document.getElementById(hide).style.display = 'none';
+}
+</script>
+</head>
+
+<body>
+<input type="radio" name="btn1" id="btn1" value="New" onclick="showAndHide('newDiv','existDiv')" selected />
+<input type="radio" name="btn1" id="btn1" value="Exist" onclick="showAndHide('existDiv','newDiv')"/>
+
+<div id="newDiv">
+new
+</div>
+<div id="existDiv" style="display:none">
+exist
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+	<TITLE>JavaScript Toolbox - Color Picker Swatch Popup</TITLE>
+<SCRIPT LANGUAGE="Javascript" SRC="colorPicker.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+var cp = new ColorPicker('window'); // Popup window
+var cp2 = new ColorPicker(); // DIV style
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR=#FFFFFF LINK="#00615F" VLINK="#00615F" ALINK="#00615F">
+
+
+<FORM>
+<TABLE BORDER="1">
+<TR>
+	<TD>
+	This popup uses a "window" popup. Use this<BR>
+	For browsers that don't support DHTML.<BR>
+
+	Color: <INPUT TYPE="text" NAME="color" SIZE="20" VALUE=""> <A HREF="#" onClick="cp.select(document.forms[0].color,'pick');return false;" NAME="pick" ID="pick">Pick</A>
+	</TD>
+</TR>
+</TABLE>
+<BR>
+<TABLE BORDER="1">
+<TR>
+	<TD>
+	This popup uses a DHTML "layer". It looks<BR>
+
+	nicer, but won't work in older browsers and<BR>
+	The color popup won't display over some form<BR>
+	elements in some browsers!<BR>
+	Color: <INPUT TYPE="text" NAME="color2" SIZE="20" VALUE=""> <A HREF="#" onClick="cp2.select(document.forms[0].color2,'pick2');return false;" NAME="pick2" ID="pick2">Pick</A>
+	</TD>
+</TR>
+
+</TABLE>
+</FORM>
+
+<SCRIPT LANGUAGE="JavaScript">cp.writeDiv()</SCRIPT>
+</BODY>
+</HTML>
+

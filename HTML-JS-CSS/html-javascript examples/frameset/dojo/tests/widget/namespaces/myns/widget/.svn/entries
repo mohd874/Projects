@@ -1,0 +1,65 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/tests/widget/namespaces/myns/widget
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+check.gif
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+c2f9b6f12e2900609f1365ae229a9408
+2007-09-19T06:53:55.028159Z
+341
+mo
+has-props
+
+Check.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+83a9279ce965e31892c3db1fb6828aa5
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+CheckBox.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+af0d3554ace1fad14a2f8bed0523a39d
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+CheckBox.css
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+b42a6f219f383117d9fa67050631e32c
+2007-09-19T06:53:55.028159Z
+341
+mo
+

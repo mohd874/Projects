@@ -1,0 +1,249 @@
+package com.game;
+
+import org.newdawn.slick.Animation;
+import org.newdawn.slick.BasicGame;
+import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.Graphics;
+import org.newdawn.slick.Image;
+import org.newdawn.slick.Input;
+import org.newdawn.slick.SlickException;
+
+public class NinjaJump extends BasicGame {
+
+	public NinjaJump(String title) {
+		super(title);
+	}
+
+	private Player player;
+
+	public Wall wallRight;
+	public Wall wallLeft;
+
+	public Obstecal[] obs;
+	public final String RESOURCES = "com/resources/";
+
+	public boolean showScore;
+	public int score;
+	
+	public Image background;
+	
+	@Override
+	public void init(GameContainer gc) throws SlickException {
+		showScore = false;
+		score = 0;
+		
+		float  initPosition;
+		
+		wallRight = initWall(gc, false);
+		
+		wallLeft = initWall(gc, true);
+		
+		initObstacles(gc);
+		
+		initPosition = wallLeft.collsionShape.getWidth();
+		initPlayer(gc, initPosition);
+		
+		background = new Image(RESOURCES+"background2.png");
+	}
+
+	private void initObstacles(GameContainer gc) throws SlickException {
+		obs = new Obstecal[7];
+		for (int i = 0; i < obs.length; i++) {
+			Obstecal o = new Obstecal(new Image(RESOURCES + "obstecal.png"));
+			o.x = -1;
+			o.y = -o.image.getHeight() - (i + 1) * 300;
+			int j = (int) (Math.random()*2);
+			if(j == 0){//this will make the obstacle placed on the left
+//				o.x = 33;
+				o.x = wallLeft.tiles[0].image.getHeight();
+			}else{//it is right
+//				o.x = 247;
+				o.x = gc.getWidth()-wallRight.tiles[0].image.getHeight();
+			}
+			obs[i] = o;
+		}
+	}
+
+	private Wall initWall(GameContainer gc, boolean isLeft) throws SlickException {
+		Tile[] tiles = new Tile[22];
+		for (int i = 0; i < tiles.length; i++) {
+			Tile tile = new Tile(new Image(RESOURCES + "wallTile.png"));
+//			tile.image.setRotation(-90);
+			if(isLeft)
+				tile.image = tile.image.getFlippedCopy(true, false);
+			
+			tiles[i] = tile;
+		}
+		
+		Wall wall = new Wall(tiles);
+		if(isLeft)
+			wall.x = 0;
+		else
+			wall.x= gc.getWidth() - wall.collsionShape.getWidth();
+		wall.y = 0;
+		wall.collsionShape.setX(wall.x);
+		wall.collsionShape.setY(wall.y);
+		wall.resetTilesLocations();
+		
+//		System.out.println("Wall collsionShape deminsions: Height: "+wall.collsionShape.getHeight()
+//				+ " Width: "+wall.collsionShape.getWidth()
+//				+ " X: "+wall.collsionShape.getX()+" Y: "+wall.collsionShape.getY());
+		return wall;
+	}
+
+	private void initPlayer(GameContainer gc, float initPosition) throws SlickException {
+		Image img;
+
+		Image[] runFramesLeft = new Image[8];
+		for (int i = 0; i < runFramesLeft.length; i++) {
+			img = new Image(RESOURCES + "run" + i + ".png");
+			img.setRotation(90);
+			runFramesLeft[i] = img;
+		}
+
+		Image[] runFramesRight = new Image[8];
+		for (int i = 0; i < runFramesRight.length; i++) {
+			img = new Image(RESOURCES + "run" + i + ".png");
+			img = img.getFlippedCopy(true, false);
+			img.setRotation(-90);
+			runFramesRight[i] = img;
+		}
+
+		Image[] jumpFrames = new Image[4];
+		for (int i = 0; i < jumpFrames.length; i++) {
+			img = new Image(RESOURCES + "jump" + i + ".png");
+			img.setRotation(-90);
+			jumpFrames[i] = img;
+		}
+		
+		Image[] deadFrames = new Image[4];
+		for (int i = 0; i < jumpFrames.length; i++) {
+			img = new Image(RESOURCES + "dead" + i + ".png");
+			deadFrames[i] = img;
+		}
+		
+		player = new Player(runFramesRight, runFramesLeft);
+		player.animationJump = new Animation(jumpFrames, 80);
+		player.animationDead = new Animation(deadFrames, 300);
+		player.animationDead.setLooping(false);
+		player.animationDead.setCurrentFrame(0);
+		player.x = initPosition;
+		player.y = gc.getHeight() - player.animationRunRight.getHeight();
+		player.isJumping = false;
+		player.jumpSpeed = 0F;
+
+	}
+
+	@Override
+	public void update(GameContainer gc, int delta) throws SlickException {
+		// TODO Auto-generated method stub
+		if (player.isAlive) {
+			score++;
+			for (int i = 0; i < obs.length; i++) {
+				Obstecal o = obs[i];
+				if (o.y > gc.getHeight()) {
+					setNewLocationForObstacle(gc,o);
+				} else {
+					o.update();
+				}
+			}
+
+			player.update(gc);
+
+			if (player.isJumping) {
+				if ((player.isOnLeftSide && player.collsionShape
+						.intersects(wallRight.collsionShape))
+						|| (!player.isOnLeftSide && player.collsionShape
+								.intersects(wallLeft.collsionShape))) {
+					player.isJumping = false;
+					player.jumpSpeed = 0F;
+					player.isOnLeftSide = !player.isOnLeftSide;
+					if(player.isOnLeftSide){
+						player.x = wallLeft.collsionShape.getWidth();
+					}else{
+						player.x = wallRight.collsionShape.getX()-player.collsionShape.getBoundingCircleRadius()*2;
+					}
+				}
+				// System.out.println("Land");
+			}
+			for (int i = 0; i < obs.length; i++) {
+				Obstecal o = obs[i];
+				if (player.collsionShape.intersects(o.collsionShape)) {
+//					System.out.println("Hit!!");
+					player.isAlive = false;
+					player.jumpSpeed = -9F;
+					// System.out.println(player.collsionShape.getX());
+					// System.out.println(o.collsionShape.getX());
+				}
+			}
+			wallLeft.update(gc);
+			wallRight.update(gc);
+		}else{
+			if(player.y < (gc.getHeight()+200)){
+				player.y += player.jumpSpeed;
+				player.jumpSpeed += 0.5F;
+			}else{
+				showScore = true;
+			}
+		}
+		Input input = gc.getInput();
+		if(showScore && (input.isKeyPressed(Input.KEY_SPACE) || input.isMousePressed(Input.MOUSE_LEFT_BUTTON))){
+			init(gc);
+		}
+	}
+
+	private void setNewLocationForObstacle(GameContainer gc, Obstecal o) {
+		int i = (int) (Math.random()*2);
+		if(i == 0){//this will make the obstacle placed on the left
+			o.x = wallLeft.collsionShape.getWidth();
+		}else{//it is right
+			o.x = wallRight.collsionShape.getX()-o.collsionShape.getWidth();
+		}
+
+		o.y = -o.image.getHeight();
+	}
+
+	// private boolean isPlayerObstacleCollide(Obstecal o, Player player2) {
+	// // TODO Auto-generated method stub
+	// if(player.x > o.x
+	// && player.x < (o.x+o.image.getWidth())
+	// && player.y > o.y
+	// && player.y < (o.x+o.image.getHeight())){
+	// return true;
+	// }
+	// return false;
+	// }
+
+	public void render(GameContainer gc, Graphics g2d) throws SlickException {
+		// TODO Auto-generated method stub
+		background.draw(0, 0);
+		player.draw();
+		wallRight.draw();
+		wallLeft.draw();
+		for (int i = 0; i < obs.length; i++) {
+			obs[i].draw();
+		}
+		g2d.drawString(String.valueOf(score), 10, 30);
+		if(showScore){
+			String gameOver = "   Game Over";
+			String scoreStr = " Your Score is: "+score;
+			String retry = " Press Space or\nMouse Left Button\n to play again";
+			g2d.drawString(gameOver+"\n"+scoreStr+"\n"+retry, gc.getWidth()/2-gameOver.length()*6, gc.getHeight()/2-20);
+//			g2d.drawString(score, gc.getWidth()/2-gameOver.length()*4, gc.getHeight()/2);
+//			g2d.drawString(retry, gc.getWidth()/2-gameOver.length()*4, gc.getHeight()/2+20);
+		}
+	
+		//Debugging
+		g2d.draw(wallRight.collsionShape);
+		g2d.draw(wallLeft.collsionShape);
+		g2d.draw(player.collsionShape);
+		for (Obstecal o : obs) {
+			g2d.draw(o.collsionShape);
+		}
+	}
+	
+//	public void restart(){
+//		
+//	}
+
+}

@@ -1,0 +1,142 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/tests/xdomain
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+browser
+dir
+
+test_xdomainSimpleDropdownDatePicker.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+d7b84a5026725813f892470494806806
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+images
+dir
+
+test_remoteDelayed.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+2ecb954ce4151a18d4dff70a66cfdf50
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_remoteLocalMix.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+491b2e0ee7e9f6028d458a2f95a727f1
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+doc0.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+62706381a776eff6bbf9cfc622f22d0c
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_remoteFail.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+83f814ee34b08b5389c291ee90f7badb
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_xdomainDropdownDatePicker.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+b8b0b6366c21e7d308e54f089e453c03
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_xdomainFisheyeList.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+9ebea2d69d9f4bb39e9bcc7b5748e023
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_forceXDomainLocal.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+21a4feb39e5423e79c261590ccc03085
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_xdomainTooltip.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+2862815398f033d62cae43692a4f24c5
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_remote.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+213e27d8dac9f0190a655ccc8b0e51d2
+2007-09-19T06:53:55.028159Z
+341
+mo
+

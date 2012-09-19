@@ -1,0 +1,64 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/src/math
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+matrix.js
+file
+
+
+
+
+2007-03-15T22:18:06.000000Z
+e7b3f79a62707759c53b10932dc76ffb
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+curves.js
+file
+
+
+
+
+2007-03-15T22:18:06.000000Z
+30a148b74cf810d154e4f5b707618131
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+__package__.js
+file
+
+
+
+
+2007-03-15T22:18:06.000000Z
+0b52394a866b5e1e943c2b70717502ef
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+points.js
+file
+
+
+
+
+2007-03-15T22:18:06.000000Z
+e1481a89242eb1b3c3b1c73d92de4d20
+2007-09-19T06:53:55.028159Z
+341
+mo
+

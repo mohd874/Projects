@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<script type="text/javascript" src="simpletreemenu.js">
+
+/***********************************************
+* Simple Tree Menu- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="simpletree.css" />
+</head>
+<body >
+<a href="javascript:ddtreemenu.flatten('treemenu1', 'expand')">Expand All</a> | <a href="javascript:ddtreemenu.flatten('treemenu1', 'contact')">Contact All</a>
+
+<ul id="treemenu1" class="treeview">		
+	<li><a href="Main.html" target="mainFrame" class="mnbutton" jwcid="@PageLink" page="pages/MainPage">Home</a></li>
+	<li><a href="SetStrategy.html" target="mainFrame" class="mnbutton" jwcid="@PageLink" page="pages/strategy/SetStrategyPage">Strategic Framework</a></li>
+	<li><a href="PlanBusiness.html" target="mainFrame" class="mnbutton" jwcid="@PageLink" page="pages/planbusiness/PlanBusinessPage">Business Planning</a></li>
+	<li><a href = "developprocess/vims.jnlp" target="mainFrame" class="mnbutton" onclick="loadZEN()">Business Process</a></li>
+	<li>Measure Performance
+		<ul>
+			<li><a href="BalanceScoreCard.html" target="mainFrame" class="mnbutton" jwcid="@PageLink" page="pages/measureperformance/BalanceScoreCardPage">Balance Score Card</a></li>
+			<li><a href="ProjectMonitoringOffice.html" target="mainFrame" class="mnbutton" jwcid="@PageLink" page="pages/measureperformance/ProjectMonitoringOfficePage">Project Monitoring Office</a></li>
+		</ul>
+	</li>
+	<li>Risk Management
+		<ul>
+			<li><a href="RiskMatrix.html" target="mainFrame" class="mnbutton" jwcid="@PageLink" page="pages/measureperformance/RiskMatrixPage">Risk Matrix</a></li>
+			<li><a href="bostonSquare.html" target="mainFrame" class="mnbutton" jwcid="@PageLink" page="pages/measureperformance/BostonSquarePage">Boston Square</a></li>
+		</ul>
+	</li>
+	<li><a href="Main.html" target="mainFrame" class="mnbutton" jwcid="@PageLink" page="pages/MainPage">Home</a></li>
+	
+	<li>Management Review Module
+		<ul>
+			<li><a href="ReviewMeeting.html" target="mainFrame" class="mnbutton" jwcid="@PageLink" page="pages/measureperformance/ReviewMeetingPage">Review Meeting</a></li>
+			<li><a href="TactPage.html" target="mainFrame" class="mnbutton" jwcid="@PageLink" page="pages/measureperformance/TactPage">Take Action</a></li>
+		</ul>
+	</li>
+</ul>
+
+<script type="text/javascript">
+
+//ddtreemenu.createTree(treeid, enablepersist, opt_persist_in_days (default is 1))
+
+ddtreemenu.createTree("treemenu1", true)
+
+</script>
+</body>
+</html>

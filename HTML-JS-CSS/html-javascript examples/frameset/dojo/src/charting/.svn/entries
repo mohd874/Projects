@@ -1,0 +1,118 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/src/charting
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+svg
+dir
+
+Axis.js
+file
+
+
+
+
+2007-03-15T22:18:10.000000Z
+4580116cf74d1a94df3dd8641029066e
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+__package__.js
+file
+
+
+
+
+2007-03-15T22:18:10.000000Z
+94a83abc18976cfaf75f0e6786b2d79f
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+PlotArea.js
+file
+
+
+
+
+2007-03-15T22:18:10.000000Z
+976a42def2c3f420a55e687c04f97316
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+Series.js
+file
+
+
+
+
+2007-03-15T22:18:10.000000Z
+2f40b7ebe3f99d336ae172a011b1eddf
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+Plotters.js
+file
+
+
+
+
+2007-03-15T22:18:10.000000Z
+87259283fbd5e02d15adfd435abe820c
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+Plot.js
+file
+
+
+
+
+2007-03-15T22:18:10.000000Z
+cf1f7e99ffe2aeee9ce4f1302ea59e99
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+README.txt
+file
+
+
+
+
+2007-03-15T22:03:54.000000Z
+99dbf2432a7eface4f9d79b6c0434a40
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+Chart.js
+file
+
+
+
+
+2007-03-15T22:18:10.000000Z
+cd086ccdf7e1bbe08b82c0b56869a8b5
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+vml
+dir
+

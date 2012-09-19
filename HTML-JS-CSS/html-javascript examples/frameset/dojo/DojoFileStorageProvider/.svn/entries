@@ -1,0 +1,32 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/DojoFileStorageProvider
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+DojoFileStorageProvider.class
+file
+
+
+
+
+2007-03-15T18:03:54.000000Z
+0950fb2aff9104787f809bbdd34e6b4f
+2007-09-19T06:53:55.028159Z
+341
+mo
+has-props
+
+META-INF
+dir
+

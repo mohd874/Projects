@@ -1,0 +1,616 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/src
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+animation
+dir
+
+html.js
+file
+
+
+
+
+2007-03-15T22:18:22.000000Z
+c7583da545f03ab9b9a66a8c9e326a6b
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+text
+dir
+
+debug
+dir
+
+lfx
+dir
+
+validate
+dir
+
+crypto.js
+file
+
+
+
+
+2007-03-15T22:18:24.000000Z
+1f00f77b412c193e00d88f5fb22bc37d
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+charting
+dir
+
+cal
+dir
+
+hostenv_jsc.js
+file
+
+
+
+
+2007-03-15T22:18:24.000000Z
+5cae593f84363932d0b3b233cf02d45a
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+hostenv_rhino.js
+file
+
+
+
+
+2007-03-15T22:18:08.000000Z
+c08c49dcee5dce95ea0329ad89568cf7
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+browser_debug.js
+file
+
+
+
+
+2007-03-15T22:18:10.000000Z
+e5afbad6469a71204f68671871dc9c3d
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+validate.js
+file
+
+
+
+
+2007-03-15T22:18:24.000000Z
+939e4589c871f9af6b657262983947cc
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+storage
+dir
+
+regexp.js
+file
+
+
+
+
+2007-03-15T22:18:24.000000Z
+689aae3ebbef094ada64f058eebcb7f5
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+undo
+dir
+
+svg.js
+file
+
+
+
+
+2007-03-15T22:18:12.000000Z
+512ae29c18994b77816e6b1561d250dd
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+style.js
+file
+
+
+
+
+2007-03-15T22:18:06.000000Z
+e9f82e15c58a4defb73de5c3eb5cc2b3
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+loader_xd.js
+file
+
+
+
+
+2007-03-15T22:18:24.000000Z
+fd934cb7799cc476107c631257454880
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+namespaces
+dir
+
+lang
+dir
+
+string.js
+file
+
+
+
+
+2007-03-15T22:18:06.000000Z
+7d8a78b83739be4f7f47191cda9f1e06
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+hostenv_wsh.js
+file
+
+
+
+
+2007-03-15T22:18:06.000000Z
+a1668177753f0ea34edff635993b3682
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+json.js
+file
+
+
+
+
+2007-03-15T22:18:06.000000Z
+04f3b3c70e2b542753cc9def3ff11ed9
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+Deferred.js
+file
+
+
+
+
+2007-03-15T22:18:24.000000Z
+f3e1dcc9f0be605fd805c794318b5be8
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+lang.js
+file
+
+
+
+
+2007-03-15T22:18:06.000000Z
+d546ebdbfac46f575742bf43721a85f5
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+iCalendar.js
+file
+
+
+
+
+2007-03-15T22:18:10.000000Z
+106c3c22034149f65d1583693ad7fa7c
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+flash
+dir
+
+graphics
+dir
+
+hostenv_browser.js
+file
+
+
+
+
+2007-03-15T22:18:08.000000Z
+5724bec437231ba7ca1c22c6cfd5ef71
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+string
+dir
+
+flash.js
+file
+
+
+
+
+2007-03-15T22:18:12.000000Z
+4d3ff10717bada4b23a2de25f89b28ed
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+bootstrap1.js
+file
+
+
+
+
+2007-03-15T22:18:12.000000Z
+9f8e33f1c625d1d62c95c60f2de7c870
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+hostenv_adobesvg.js
+file
+
+
+
+
+2007-03-15T22:18:22.000000Z
+23df16a8e222ac4cfd9fd9b0db2c8c84
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+collections
+dir
+
+storage.js
+file
+
+
+
+
+2007-03-15T22:18:12.000000Z
+31502824af35e725895bc81f4ad9e322
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+hostenv_svg.js
+file
+
+
+
+
+2007-03-15T22:18:06.000000Z
+ccc9322017e9e666d3258688c8acf721
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+io.js
+file
+
+
+
+
+2007-03-15T22:18:06.000000Z
+1335dbe78039596602e3ef7da32f7f35
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+widget
+dir
+
+gfx
+dir
+
+rpc
+dir
+
+AdapterRegistry.js
+file
+
+
+
+
+2007-03-15T22:18:08.000000Z
+18f8632c9cacbe9bf308849a59e71730
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+a11y.js
+file
+
+
+
+
+2007-03-15T22:18:24.000000Z
+2cbc18e278301811e170b6593819d096
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+math
+dir
+
+animation.js
+file
+
+
+
+
+2007-03-15T22:18:06.000000Z
+9136bda58183091aed8ecde3ecbf660f
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+ns.js
+file
+
+
+
+
+2007-03-15T22:18:06.000000Z
+91801a2df4591660be53f67dc3622f4e
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+uri
+dir
+
+html
+dir
+
+math.js
+file
+
+
+
+
+2007-03-15T22:18:10.000000Z
+0f5e71caaf25a57c536e83b53617a919
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+hostenv_dashboard.js
+file
+
+
+
+
+2007-03-15T22:18:06.000000Z
+385122f85ae5946bdef5b71d77708251
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+data
+dir
+
+profile.js
+file
+
+
+
+
+2007-03-15T22:18:06.000000Z
+344af50928615c4683c72fb3b73e0828
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+date
+dir
+
+i18n
+dir
+
+crypto
+dir
+
+loader.js
+file
+
+
+
+
+2007-03-15T22:18:10.000000Z
+8adcdd557f56ab316dfe6e78df4e4818
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+event
+dir
+
+data.js
+file
+
+
+
+
+2007-03-15T22:18:02.000000Z
+8690f79d030c22b48b5257b353565460
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+selection
+dir
+
+logging
+dir
+
+DeferredList.js
+file
+
+
+
+
+2007-03-15T22:18:10.000000Z
+2296a59b7fd55297bf083f0eb7a3b486
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+date.js
+file
+
+
+
+
+2007-03-15T22:18:02.000000Z
+ee0c3c475ca188f543134827f2932d82
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+hostenv_spidermonkey.js
+file
+
+
+
+
+2007-03-15T22:18:22.000000Z
+9acb0df060c876b644e6f7efa83773fe
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+dom.js
+file
+
+
+
+
+2007-03-15T22:18:10.000000Z
+231078750c5f6729711637bd1bbe7ac5
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+event.js
+file
+
+
+
+
+2007-03-15T22:18:12.000000Z
+a5c5f0dd445638b55b3c03f90986b9fb
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+browser_debug_xd.js
+file
+
+
+
+
+2007-03-15T22:18:12.000000Z
+318d177cdec1e140b7722b062d681e36
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+xml
+dir
+
+debug.js
+file
+
+
+
+
+2007-03-15T22:18:12.000000Z
+045d9f4786f3138f5df4f8df8b55391f
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+docs.js
+file
+
+
+
+
+2007-03-15T22:18:08.000000Z
+0d1cf111ee1ad5d2d7b0155049de0d69
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+dnd
+dir
+
+uuid
+dir
+
+io
+dir
+
+experimental.js
+file
+
+
+
+
+2007-03-15T22:18:10.000000Z
+f1876f858e2306af091a7dfcc701b389
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+behavior.js
+file
+
+
+
+
+2007-03-15T22:18:24.000000Z
+c053159de35402ac99ed0cbd446c6e6b
+2007-09-19T06:53:55.028159Z
+341
+mo
+

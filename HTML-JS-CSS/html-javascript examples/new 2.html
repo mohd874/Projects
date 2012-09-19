@@ -1,0 +1,80 @@
+<html>
+<head>
+<script language="javascript">
+<!--
+function enableField(target)
+{
+target.disabled=false;
+}
+ 
+function disableField(target)
+{
+target.disabled=true;
+}
+ 
+function CheckTextbox(src,target) {
+	var txt;
+	// first set a reference to the textbox 
+	txt = src;
+	// check if the textbox is NOT blank
+	if (txt.value != "") {
+	document.form1.c.value=txt.value;
+	disableField(target);
+	//code here for if textbox has text in it and then show the checkmark icon
+	
+	}
+	else {
+	document.form1.c.value=txt.value;
+	enableField(target);
+	//code here for if the txtName textbox is empty, do not display the icon on the nav tab.
+	
+	}
+}
+
+function PutTextInTextBox(src,hiddenField){
+	var string = src;
+	var hdnField = hiddenField;
+	document.form1.PutTextInsideMe.value=string.name;
+	document.form1.ShowMeHiddenFieldsValue.value=hdnField.value;
+	
+}
+//-->
+</script>
+<title>
+Javascript testing
+</title>
+</head>
+
+<body>
+<form name="form1">
+<br>
+type something here to disable the next textbox: <input type="text" id="txtName" name="txtName" onchange="javascript:CheckTextbox(this,document.form1.txtName2)"/><br><br>
+this textbox should be disabled if you type something in the box above: <input type="text" name="txtName2" /><br><br>
+<textarea id="c" name="c">
+
+</textarea>
+<br>
+<br>
+<a id="link1" name="Nothing is Everything" href="#" onclick="javascript:PutTextInTextBox(this,document.form1.hidden1)">Nothing is Everything</a> <input type="hidden" id="hidden1" value="1"/>&nbsp;&nbsp;
+
+<a id="link2" name="Hello My Friend" href="#" onclick="javascript:PutTextInTextBox(this)">Hello My Friend</a> &nbsp;&nbsp;
+
+<a id="link3" name="Who am I?" href="#" onclick="javascript:PutTextInTextBox(this)">Who am I?</a> &nbsp;&nbsp;<br><br>
+
+Click the link above me: <input type="text" id="PutTextInsideMe" name="txtName"/><br>
+Show Me Hidden Fields Value: <input type="text" id="ShowMeHiddenFieldsValue" name="txtName"/>
+</form>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+

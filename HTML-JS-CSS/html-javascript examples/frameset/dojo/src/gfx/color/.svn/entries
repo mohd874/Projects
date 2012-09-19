@@ -1,0 +1,40 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/src/gfx/color
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+hsl.js
+file
+
+
+
+
+2007-03-15T22:18:00.000000Z
+d7fbab6455d8e9b3fb40c6c31148b17f
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+hsv.js
+file
+
+
+
+
+2007-03-15T22:18:00.000000Z
+2b6b6d952df5abaf7f8083501f983845
+2007-09-19T06:53:55.028159Z
+341
+mo
+

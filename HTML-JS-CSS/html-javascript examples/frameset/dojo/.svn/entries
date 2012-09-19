@@ -1,0 +1,181 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+release
+dir
+
+storage_dialog.swf
+file
+
+
+
+
+2007-03-15T22:04:14.000000Z
+ee5e812be3bec7fe6918dca0d59c5373
+2007-09-19T06:53:55.028159Z
+341
+mo
+has-props
+
+LICENSE
+file
+
+
+
+
+2007-03-15T22:04:14.000000Z
+2e06c0a18dc1dc610da25b7a1b646239
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+iframe_history.html
+file
+
+
+
+
+2007-03-15T22:04:14.000000Z
+3b2676173f713579ec6503ec02e1272d
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+dojo.js.uncompressed.js
+file
+
+
+
+
+2007-03-15T22:17:48.000000Z
+88fdb7af345c320aacd177aba4e64a1e
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+src
+dir
+
+DojoFileStorageProvider
+dir
+
+Storage_version6.swf
+file
+
+
+
+
+2007-03-15T22:04:14.000000Z
+2c27557dc9fc3003f084aa8c0a714d51
+2007-09-19T06:53:55.028159Z
+341
+mo
+has-props
+
+README
+file
+
+
+
+
+2007-03-15T22:04:14.000000Z
+20e4496f8ce6729b2e558a14cd8dd510
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+Storage_version8.swf
+file
+
+
+
+
+2007-03-15T22:04:14.000000Z
+f205ea281943a40298cf258d483f9a0d
+2007-09-19T06:53:55.028159Z
+341
+mo
+has-props
+
+flash6_gateway.swf
+file
+
+
+
+
+2007-03-15T22:04:14.000000Z
+a20bd0bc570839106163f096ae20d3f7
+2007-09-19T06:53:55.028159Z
+341
+mo
+has-props
+
+tests
+dir
+
+dojo.js
+file
+
+
+
+
+2007-03-15T22:17:46.000000Z
+cf0196d2f7518534422bd6a80cff41e7
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+DojoFileStorageProvider.jar
+file
+
+
+
+
+2007-03-15T22:17:08.000000Z
+828a32267910dc22b54d91303e8ecc81
+2007-09-19T06:53:55.028159Z
+341
+mo
+has-props
+
+cs3.jpg
+file
+
+
+
+
+2007-04-11T07:05:44.000000Z
+7ed3695791bcda7f41bac4e744fca671
+2007-09-19T06:53:55.028159Z
+341
+mo
+has-props
+
+demos
+dir
+
+build.txt
+file
+
+
+
+
+2007-03-15T22:17:14.000000Z
+eb0b755889037d9ba1fd0d5555a6ec7c
+2007-09-19T06:53:55.028159Z
+341
+mo
+

@@ -1,0 +1,64 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/src/string
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+extras.js
+file
+
+
+
+
+2007-03-15T22:18:12.000000Z
+1b02b60a3b371fdb43ecd6ecb73a6d8f
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+Builder.js
+file
+
+
+
+
+2007-03-15T22:18:12.000000Z
+6f18f55a744562cf0bf75b8c25a44d59
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+__package__.js
+file
+
+
+
+
+2007-03-15T22:18:12.000000Z
+70403459a3998979b9ff6563c00a46eb
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+common.js
+file
+
+
+
+
+2007-03-15T22:18:12.000000Z
+f33b4f9cfc6c3a58b47bc9a5942fe07e
+2007-09-19T06:53:55.028159Z
+341
+mo
+

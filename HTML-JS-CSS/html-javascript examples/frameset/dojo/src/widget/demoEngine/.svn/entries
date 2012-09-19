@@ -1,0 +1,91 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/src/widget/demoEngine
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+SourcePane.js
+file
+
+
+
+
+2007-03-15T22:18:14.000000Z
+46a6ca9ce2eaa5b9b13543a82c1f61c0
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+__package__.js
+file
+
+
+
+
+2007-03-15T22:18:14.000000Z
+3981156e6c054da72bb80a96ddef4281
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+DemoContainer.js
+file
+
+
+
+
+2007-03-15T22:18:14.000000Z
+c007da52c557432d1e5b61eb34e895d4
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+DemoPane.js
+file
+
+
+
+
+2007-03-15T22:18:14.000000Z
+6405469d42b2d67ea2ba78ea7f39636a
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+DemoNavigator.js
+file
+
+
+
+
+2007-03-15T22:18:14.000000Z
+a7b2da584f009c32eafaac0de9427198
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+templates
+dir
+
+DemoItem.js
+file
+
+
+
+
+2007-03-15T22:18:14.000000Z
+ee67920f0795f495adc8d6391dd5eebb
+2007-09-19T06:53:55.028159Z
+341
+mo
+

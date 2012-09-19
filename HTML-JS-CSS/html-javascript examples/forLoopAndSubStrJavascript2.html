@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script>
+function getAllDivsWithNameDiv(){
+	var toReturn = "";
+	var loopItems = document.form1.elements;
+	
+	var positions = initPositions(positions);
+	var count = 0;
+	for (var i = 0; i < loopItems.length; i++)   {
+        var child = loopItems[i];
+        var childId = child.id;
+		
+		alert("loop "+i);	
+		//if(childId != null){alert("childId.substr(0,9): "+childId.substr(0,9));}		
+		if(childId != null && childId.substr(0,9) == "textfield"){
+			alert("childId "+childId);
+			for (var x = 0; x < positions.length; x++)   {
+				alert("child value: "+child.value+" == positions["+x+"] "+positions[x]+" result: "+(positions[x] == child.value));
+				
+            	if(positions[x] == child.value){
+					count++;
+					if(count > 1){
+						alert("Some positions are duplicated");
+						return false;
+					}
+            	}
+            }
+			count = 0;
+		}
+	}
+	alert("Everything is fine");
+	return true;
+}
+
+	function initPositions(){
+		var formElements = document.form1.elements;
+		var p = new Array(formElements.length);
+
+		var count = 0;
+			for(var c=0;c<formElements.length;c++){
+				alert('c: '+c);
+				if(formElements[c] != null && formElements[c].id.substr(0,9) == "textfield"){
+					p[count] = formElements[c].value;
+					alert('p[count]: '+p[count]);
+					count++;
+				}
+			}
+			
+		return p;
+	}
+
+function getByWildCard(){
+alert(document.getElementById("text*"));
+}
+</script>
+<form id="form1" name="form1" method="post" action="">
+
+
+  <table width="40%" border="0" id="table1">
+    <tr name="row1" id="row1">
+      <td name="cell1" id="cell1">text1</td>
+      <td><input type="text" name="textfield" id="textfield"/></td>
+    </tr>
+    <tr>
+      <td>text2</td>
+      <td><input type="text" name="textfield2" id="textfield2"/></td>
+    </tr>
+    <tr>
+      <td>text3</td>
+      <td><input type="text" name="textfield3" id="textfield3"/></td>
+    </tr>
+  </table>
+  <p id="p1">&nbsp;</p>
+  <p id="p2"><a name="link1" id="link1" onclick="getAllDivsWithNameDiv()" style="color:#0033FF;cursor:pointer"> Click Here</a>
+    </p>
+</form>
+</body>
+</html>

@@ -1,0 +1,487 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/tests
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+animation
+dir
+
+deferredList.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+946874644d7eadb730c2c049418eddd9
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_calendar.ics
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+52d0c35c7531e5f20e452516761443cf
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_MockXMLHttpRequest.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+e258414d3a6d955cb1999e3a785c0fa2
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+debug
+dir
+
+lfx
+dir
+
+validate
+dir
+
+test_docs.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+0d8474c158d8d15a1346e5f3b3849942
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_hostenv_adobesvg.svg
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+1a80ce28a4a0de89d54ae014698564e1
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_MockXMLHttpRequest.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+13e08f9789352eb3c2899551dd86ac1e
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+charting
+dir
+
+test_dojo.xsl
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+0b88e568a3b1554dcd443ad0b09e8fa2
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+storage
+dir
+
+undo
+dir
+
+test_html.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+ba691d6e9d7c909a5193d7ff2a1b6967
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_fix_ecma.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+ff458764d6b561f04c4140d0d132514c
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_bootstrap.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+590cec94d6ef681180ae5addd12cfea9
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+lang
+dir
+
+test_placeOnScreen.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+c2774ec0d10cd726bb61d084a328d9c9
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_iCalendar.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+2cc683419528372b9a8f803e224b99a0
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_dojo_double.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+9c17e93a5d9ee461c8b567d349f98a13
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_bootstrap.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+7ff929d922c7863eadda8c5f300a6054
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_deferred.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+0566e6e383834edba0bd8618470ba64b
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+flash
+dir
+
+xdomain
+dir
+
+graphics
+dir
+
+test_math.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+61c6c3af398bde68a474d32be959552b
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_hostenv_browser.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+31cc85da15c7ea604ea31dc74ed08cd4
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+string
+dir
+
+collections
+dir
+
+widget
+dir
+
+rpc
+dir
+
+gfx
+dir
+
+_bootstrap.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+3ef8a199c06e6bd54742cd68e378fd42
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+math
+dir
+
+test_dojo.xml
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+c7b4fc5a8998e19d3b9d7104155d8e69
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+jslink
+dir
+
+uri
+dir
+
+test_behavior.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+487184c3653995ab24ccf753d89ca3ad
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+html
+dir
+
+data
+dir
+
+test_html_selection.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+83bdae751448cb675db75cfbf60fd330
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+date
+dir
+
+test_embedded_html.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+44faeea909976f2f9a5b0b5e96f135d1
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+i18n
+dir
+
+crypto
+dir
+
+event
+dir
+
+test_dom.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+64503c366f7db2e2a7b2d5fec5fe96e2
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+compat
+dir
+
+epilogue.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+24259bbe697b569172b4e8f787bb455e
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+logging
+dir
+
+test_dom.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+95f119c4049febed21b6cc02a27b24c0
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_ns.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+fac12d147e1f27158925041f1b4acd22
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+jsunit_browser.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+9c92f05191c1a96411bc7e98a853152e
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+MockXMLHttpRequest.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+8a00de18f8d56ba579d527bc6190c21e
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+xml
+dir
+
+style
+dir
+
+test_html_content.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+36c70c126b0948654fa6d4d72a22b388
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+__package__.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+15f6606b1b4e0d7196ed84f7995ebaeb
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+dnd
+dir
+
+loader
+dir
+
+uuid
+dir
+
+io
+dir
+
+prologue.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+b03d21194f47142bf421c1f739245561
+2007-09-19T06:53:55.028159Z
+341
+mo
+

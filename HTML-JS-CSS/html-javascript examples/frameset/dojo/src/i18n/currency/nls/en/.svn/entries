@@ -1,0 +1,88 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/src/i18n/currency/nls/en
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+GBP.js
+file
+
+
+
+
+2007-03-15T22:18:04.000000Z
+2f6991fe621b8246ee45f0bcbd329b80
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+ITL.js
+file
+
+
+
+
+2007-03-15T22:18:04.000000Z
+ceac29a6ec445ec77852f96bc7232edb
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+INR.js
+file
+
+
+
+
+2007-03-15T22:18:04.000000Z
+64da7c59bfa06a8958935d2e4b5a8100
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+USD.js
+file
+
+
+
+
+2007-03-15T22:18:04.000000Z
+2fc6389a0adcfc4dc9f6bdedb842e15c
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+EUR.js
+file
+
+
+
+
+2007-03-15T22:18:04.000000Z
+7cb05529dffd4fbe5aa4d78fa6f26e64
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+JPY.js
+file
+
+
+
+
+2007-03-15T22:18:04.000000Z
+49aaca0a72aa17cd82eb5fbda33bb23f
+2007-09-19T06:53:55.028159Z
+341
+mo
+

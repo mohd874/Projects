@@ -1,0 +1,199 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E468F5013C864A80029B959 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E468F4F13C864A80029B959 /* main.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3E468F4913C864A80029B959 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3E468F4B13C864A80029B959 /* Xcode-Sketch */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Xcode-Sketch"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E468F4F13C864A80029B959 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		3E468F5113C864A80029B959 /* Xcode_Sketch.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Xcode_Sketch.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E468F4813C864A80029B959 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E468F4013C864A80029B959 = {
+			isa = PBXGroup;
+			children = (
+				3E468F4E13C864A80029B959 /* Xcode-Sketch */,
+				3E468F4C13C864A80029B959 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3E468F4C13C864A80029B959 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E468F4B13C864A80029B959 /* Xcode-Sketch */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E468F4E13C864A80029B959 /* Xcode-Sketch */ = {
+			isa = PBXGroup;
+			children = (
+				3E468F4F13C864A80029B959 /* main.c */,
+				3E468F5113C864A80029B959 /* Xcode_Sketch.1 */,
+			);
+			path = "Xcode-Sketch";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E468F4A13C864A80029B959 /* Xcode-Sketch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E468F5413C864A80029B959 /* Build configuration list for PBXNativeTarget "Xcode-Sketch" */;
+			buildPhases = (
+				3E468F4713C864A80029B959 /* Sources */,
+				3E468F4813C864A80029B959 /* Frameworks */,
+				3E468F4913C864A80029B959 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Xcode-Sketch";
+			productName = "Xcode-Sketch";
+			productReference = 3E468F4B13C864A80029B959 /* Xcode-Sketch */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3E468F4213C864A80029B959 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 3E468F4513C864A80029B959 /* Build configuration list for PBXProject "Xcode-Sketch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3E468F4013C864A80029B959;
+			productRefGroup = 3E468F4C13C864A80029B959 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E468F4A13C864A80029B959 /* Xcode-Sketch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E468F4713C864A80029B959 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E468F5013C864A80029B959 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3E468F5213C864A80029B959 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3E468F5313C864A80029B959 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3E468F5513C864A80029B959 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3E468F5613C864A80029B959 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E468F4513C864A80029B959 /* Build configuration list for PBXProject "Xcode-Sketch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E468F5213C864A80029B959 /* Debug */,
+				3E468F5313C864A80029B959 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E468F5413C864A80029B959 /* Build configuration list for PBXNativeTarget "Xcode-Sketch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E468F5513C864A80029B959 /* Debug */,
+				3E468F5613C864A80029B959 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3E468F4213C864A80029B959 /* Project object */;
+}

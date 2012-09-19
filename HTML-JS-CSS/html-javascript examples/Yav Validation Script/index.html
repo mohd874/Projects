@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Yav Validation Example</title>
+<script src="yav.js" type="text/javascript"></script>
+<script src="yav-config.js" type="text/javascript"></script>
+ <SCRIPT>
+//only for test purposes
+function checkOnSubmit(formName, r) {
+    document.getElementById(yav_config.errorsdiv).className = '';
+    document.getElementById(yav_config.errorsdiv).style.display = 'none';
+    var alertType = document.getElementById('alertType').value;
+    if (yav.performCheck(formName, r, alertType)) {
+        alert('Form validated (you usually submit your form now)');
+    } else if (alertType=='jsVar') {
+        alert('jsErrors variable contains the array of errors:\n\n' +jsErrors + '\n\n Use this variable like you prefer!');
+    }
+}
+
+var rules2=new Array();
+rules2[0]='frequency|required';
+rules2[1]='activation:Activation date|date';
+rules2[2]='deactivation:Dectivation date|date';
+rules2[3]='activation:Activation date|date_lt|$deactivation:Dectivation date';
+rules2[4]='activation|mask|date';
+rules2[5]='deactivation|mask|date';
+yav.addHelp('frequency', 'Provide the frequency of notification you prefer');
+yav.addHelp('activation', 'Provide the activation date of the service');
+yav.addHelp('deactivation', 'Provide the deactivation date of the service');
+yav.addMask('date', '  -  -    ', '1234567890');
+
+</SCRIPT>
+
+</head>
+
+<body onload="yav.init('exampleForm', rules2);">
+<br /><br /><br />
+<div id="errorsDiv"></div>
+<form name="form1" onsubmit="performCheck('form1', rules, 'innerHtml');return false;">
+ <script type="text/javascript">
+  	var rules=new Array();
+	rules[0]='name|required|Name is required';
+	rules[1]='pass|required|Password is required';
+	rules[2]='pass|minlength|8|Password must be at least 8 characters long';
+	rules[3]='cpass|equal|$pass|Confirm Password is not equal to the Password';
+	rules[4]='email|required';		
+	rules[5]='email|email';
+	rules[6]='joindate:Join Date|date';
+	rules[7]='joindate|mask|mydate';
+	rules[8]='telephone|mask|myphone';
+	rules[9]='status:Marrital Status|notequal|Please Select...|Please select your marrital status';
+	rules[10]='gender:Gender|required|هل أنت رجل أم إمرأة؟';
+	rules[11]='upload|required';
+	rules[12]='telephone|double|Telephone should only contain numbers';
+		
+	yav.addHelp('name', 'Provide your username');
+	yav.addHelp('pass', 'Provide your password');
+	yav.addHelp('cpass', 'Confirm your password');
+	yav.addHelp('email', 'Enter your e-mail');
+	yav.addMask('mydate', '  -  -    ', '1234567890');
+	yav.addMask('myphone', '   -       ', '1234567890');
+	
+	yav.init('form1', rules);
+	//this function was found on: http://www.codestore.net/store.nsf/unid/DOMM-4Q8H9E?OpenDocument
+	function TestFileType( fileName, fileTypes ) {
+	if (!fileName) return;
+	
+	dots = fileName.split(".")
+	//get the part AFTER the LAST period.
+	fileType = "." + dots[dots.length-1];
+	
+	return (fileTypes.join(".").indexOf(fileType) != -1) ?
+		alert('That file is OK!') :
+		alert("Please only upload files that end in types: \n\n" + (fileTypes.join(" .")) + "\n\nPlease select a new file and try 		again.");
+	}
+	
+	function performCheck(form,rules,view){
+		var valid = yav.performCheck(form,rules,view);
+		if(valid){
+			alert("Valid");
+		}else{
+			alert("Invalid");
+		}
+	}
+  </script>
+  <table width="40%" border="0" align="center" style="vertical-align:middle">
+    <tr>
+      <th colspan="2" scope="col">Registration Form </th>
+    </tr>
+    <tr>
+      <th width="50%" scope="row"><div align="right">Name:</div></th>
+      <td width="50%"><div align="left">
+        <input name="name" type="text" id="name" />
+      </div></td>
+    </tr>
+    <tr>
+      <th width="50%" scope="row"><div align="right">Password:</div></th>
+      <td width="50%"><div align="left">
+        <input type="password" name="pass" />
+      </div></td>
+    </tr>
+    <tr>
+      <th width="50%" scope="row"><div align="right">Confirm: </div></th>
+      <td width="50%"><div align="left">
+        <input type="password" name="cpass" />
+      </div></td>
+    </tr>
+    <tr>
+      <th width="50%" scope="row"><div align="right">Marital Status: </div></th>
+      <td width="50%"><div align="left">
+        <select name="status" id="status">
+          <option selected="selected">Please Select...</option>
+          <option>Single</option>
+          <option>Married</option>
+          <option>Divorsed</option>
+        </select>
+      </div></td>
+    </tr>
+    <tr>
+      <th width="50%" scope="row"><div align="right">Gender:</div></th>
+      <td width="50%"><div align="left">
+          <input name="gender" type="radio" value="radiobutton" />
+      Male
+        <input name="gender" type="radio" value="radiobutton" />
+      Female</div></td>
+    </tr>
+    <tr>
+      <th width="50%" scope="row"><div align="right">Telephone:</div></th>
+      <td width="50%"><div align="left">
+        <input type="text" name="telephone" />
+      </div></td>
+    </tr>
+    <tr>
+      <th scope="row"><div align="right">Join Date: </div></th>
+      <td><div align="left">
+        <input name="joindate" type="text" id="joindate" />
+      </div></td>
+    </tr>
+    <tr>
+      <th width="50%" scope="row"><div align="right">Email:</div></th>
+      <td width="50%"><div align="left">
+        <input type="text" name="email" />
+      </div></td>
+    </tr>
+    <tr>
+      <th scope="row"><div align="right">Upload Photo :</div></th>
+      <th scope="row"><div align="left">
+        <input type="file" name="upload" />
+      </div></th>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row"><input type="submit" name="Submit" value="Submit" /></th>
+    </tr>
+  </table>
+</form>
+<br><br>
+
+His Example:
+<br>
+<br>
+
+<form name="exampleForm" id="exampleForm">
+
+<TABLE valign=top>
+            <TR><TD class=><H4>Notification of changes</H4></TD>
+            <TD align=right></TD></TR>
+            <TR><TD class=>Frequency:</TD><TD>
+            <SELECT name=frequency class=inputNormal />
+                <OPTION value=''></OPTION>
+
+                <OPTION value='daily'>daily</OPTION>
+                <OPTION value='weekly'>weekly</OPTION>
+                <OPTION value='monthly'>monthly</OPTION>
+            </SELECT>&nbsp;&nbsp;<span id=errorsDiv_frequency></span></TD></TR>
+            <TR><TD class=>Activation date:</TD><TD><INPUT type=text name=activation class=inputNormal />&nbsp;&nbsp;<span id=errorsDiv_activation></span></TD></TR>
+            <TR><TD class=>Deactivation date:</TD><TD><INPUT type=text name=deactivation class=inputNormal />&nbsp;&nbsp;<span id=errorsDiv_deactivation></span></TD></TR>
+
+            <TR><TD class=>&nbsp;</TD><TD></TD></TR>
+            <TR><TD class=><INPUT type=submit value=Check class=buttonstyle /><br></TD><TD></TD></TR>
+            </TABLE>
+
+
+</form>
+</body>
+</html>

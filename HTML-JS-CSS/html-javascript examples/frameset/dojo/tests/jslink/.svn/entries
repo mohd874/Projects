@@ -1,0 +1,52 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/tests/jslink
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+lib.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+94204629ecd4255f4752626c4f43390d
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+program.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+ceb6ca126b6bab85092e56ce01ac4795
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+link-and-run.sh
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+0750f4ed2c5be918a79142723a59971c
+2007-09-19T06:53:55.028159Z
+341
+mo
+

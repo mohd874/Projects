@@ -1,0 +1,42 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/demos/gfx/images
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+Thumbs.db
+file
+
+
+
+
+2007-05-08T07:11:20.000000Z
+7df08158635961e1ba0f7cf535fa66f3
+2007-09-19T06:53:55.028159Z
+341
+mo
+has-props
+
+clock_face.jpg
+file
+
+
+
+
+2007-03-15T22:04:10.000000Z
+be6ebe6286d7dc217d862bdc8ad77801
+2007-09-19T06:53:55.028159Z
+341
+mo
+has-props
+

@@ -1,0 +1,139 @@
+
+<html>
+<head>
+<title>Activity</title>
+
+</head>
+<script type="text/javascript" src="colorPicker.js"></script>
+
+
+<body class="body" id="Body">
+
+<script language="Javascript" src="colorPicker.js"></script>
+<script language="Javascript" src="colorPicker2.js"></script>
+<script language="JavaScript">
+var cp = new ColorPicker();
+</script>
+<script language="javascript">
+
+function editRow(id){
+	document.getElementById('action'+id+'view').style.display = 'none';
+	document.getElementById('code'+id+'view').style.display = 'none';
+	document.getElementById('name'+id+'view').style.display = 'none';
+	document.getElementById('position'+id+'view').style.display = 'none';
+	document.getElementById('color'+id+'view').style.display = 'none';
+	
+	document.getElementById('action'+id+'edit').style.display = 'block';
+	document.getElementById('code'+id+'edit').style.display = 'block';
+	document.getElementById('name'+id+'edit').style.display = 'block';
+	document.getElementById('position'+id+'edit').style.display = 'block';
+	document.getElementById('color'+id+'edit').style.display = 'block';
+}
+ 
+function cancelRow(id,type){
+	document.getElementById('action'+id+'view').style.display = 'block';
+	document.getElementById('code'+id+'view').style.display = 'block';
+	document.getElementById('name'+id+'view').style.display = 'block';
+	document.getElementById('position'+id+'view').style.display = 'block';
+	document.getElementById('color'+id+'view').style.display = 'block';
+	
+	document.getElementById('action'+id+'edit').style.display = 'none';
+	document.getElementById('code'+id+'edit').style.display = 'none';
+	document.getElementById('name'+id+'edit').style.display = 'none';
+	document.getElementById('position'+id+'edit').style.display = 'none';
+	document.getElementById('color'+id+'edit').style.display = 'none';
+}
+ 
+function pickColor(pickerLink,persId){
+	
+	var targetField = getTextFieldId(pickerLink);
+	//cp.select(targetField,pickerLink.id);
+	//alert(targetField);
+	showColorGrid3('hex','color4edit');
+	return false;
+}
+
+function getTextFieldId(link){
+	return link.parentNode.childNodes[1].id;
+}
+</script>
+<form method="post" action="/VIMSWeb/pages/administration/PerspectiveMatrixPage,vimsForm.sdirect" id="vimsForm">
+<div style="display:none;" id="vimsFormhidden"><input type="hidden" name="formids" value="For,LinkSubmit,TextField,TextField_0,TextField_1,hex,LinkSubmit_0,TextField_2,TextField_0_0,TextField_1_0,hex_0,LinkSubmit_1,TextField_3,TextField_0_1,TextField_1_1,hex_1,LinkSubmit_2,TextField_4,TextField_0_2,TextField_1_2,hex_2" />
+<input type="hidden" name="submitmode" value="" />
+<input type="hidden" name="submitname" value="" />
+<input type="hidden" name="For" value="VCae.iemq.vims.domain.Perspective-4" />
+<input type="hidden" name="For" value="VCae.iemq.vims.domain.Perspective-2" />
+<input type="hidden" name="For" value="VCae.iemq.vims.domain.Perspective-1" />
+<input type="hidden" name="For" value="VCae.iemq.vims.domain.Perspective-3" />
+
+</div>
+<table class="DisplayTable">
+  <tr>
+    <th class="SFHeader" id="Any">Action</th>
+    <th class="SFHeader" id="Any_0">Code</th>
+    <th class="SFHeader" id="Any_1">Name</th>
+    <th class="SFHeader" id="Any_2">Position</th>
+    <th class="SFHeader" id="Any_3">Color</th>
+
+  </tr>
+  <tr id="For">
+    <td class="DisplayTableCell" bgcolor="#FFFFE1" id="Any_4">
+		<div id="action4view" style="display:block">
+    		<a onclick="editRow(4)" style="cursor:pointer;color:blue;" href="#" id="Any_6">Edit</a>
+    	</div>
+   		<div id="action4edit" style="display:none">
+    		<a href="javascript:tapestry.form.submit(&quot;vimsForm&quot;, &quot;LinkSubmit&quot;);" id="LinkSubmit" value="Edit" type="submit">Submit</a> 
+			<a onclick="cancelRow(4)" style="cursor:pointer;color:blue;" id="Any_8">Cancel</a>
+
+    	</div>
+    </td>
+    <td class="DisplayTableCell" bgcolor="#FFFFE1" id="Any_9">
+    	<div id="code4view" style="display:block">
+    		G&amp;L
+    	</div>
+   		<div id="code4edit" style="display:none">
+    		<input type="text" name="TextField" value="G&amp;L" id="TextField" />
+    	</div>
+
+    </td>
+    <td class="DisplayTableCell" bgcolor="#FFFFE1" id="Any_12">
+		<div id="name4view" style="display:block">
+    		Growth &amp; Learning
+    	</div>
+    	<div id="name4edit" style="display:none">
+    		<input type="text" name="TextField_0" value="Growth &amp; Learning" id="TextField_0" />
+    	</div>
+
+   	</td>
+    <td class="DisplayTableCell" bgcolor="#FFFFE1" id="Any_15">
+		<div id="position4view" style="display:block">
+    		1
+    	</div>
+    	<div id="position4edit" style="display:none">
+    		<input type="text" name="TextField_1" value="1" id="TextField_1" />
+    	</div>
+   	</td>
+
+    <td class="DisplayTableCell" bgcolor="#ffffff" id="colorCell">
+	<div id="colorpicker301" class="colorpicker301"></div>
+		<div id="color4view" style="display:block">
+	    	255.255.255
+    	</div>
+    	<div id="color4edit" style="display:none">
+    		<input type="text" name="hex1" value="" id="hex1" />
+    		<!-- a jwcid="@Any" href="#" 
+    		onclick="getChildId(this);return false;"
+    		name="ognl:getColorPickerName(loopPerspective)">Pick Color</a-->
+    		<a onclick="showColorGrid3('hex1','color4edit')" href="#" id="colorPicker">Pick Color</a>
+    	</div>
+    </td>
+  </tr>
+</table>
+</form>
+<script language="JavaScript">cp.writeDiv()</script>
+
+</body>
+</html>
+<!-- Render time: ~ 47 ms -->
+
+

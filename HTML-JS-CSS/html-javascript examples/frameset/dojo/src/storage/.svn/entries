@@ -1,0 +1,68 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/src/storage
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+java
+dir
+
+__package__.js
+file
+
+
+
+
+2007-03-15T22:18:10.000000Z
+64abb1f2594310f8b2b612a80f8dc69b
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+storage_dialog.fla
+file
+
+
+
+
+2007-03-15T22:03:54.000000Z
+d08bc44ec8e2d4e672705e02d76aec37
+2007-09-19T06:53:55.028159Z
+341
+mo
+has-props
+
+Storage.as
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+5d536ad6f87ffd4486fe0d203444c8dd
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+browser.js
+file
+
+
+
+
+2007-03-15T22:18:10.000000Z
+09f020c456fc8c4d86eee81564cc406a
+2007-09-19T06:53:55.028159Z
+341
+mo
+

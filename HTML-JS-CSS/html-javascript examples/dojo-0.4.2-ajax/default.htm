@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Dojo Ajax test by dhani in php</title>
+<head> 
+<!-- dojo starts---->
+<script type="text/javascript">function ajaxFunction()
+ {  var xmlHttp;
+  try
+    {    // Firefox, Opera 8.0+, Safari    xmlHttp=new XMLHttpRequest();    }
+  catch (e)
+      {    // Internet Explorer    try
+        {      xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");      }
+    catch (e)
+        {      try
+         {        xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");        }
+      catch (e)
+        {        alert("Your browser does not support AJAX!");       
+		 return false;     
+		    }     
+		}    
+	}  
+ }
+	</script>
+
+<script type="text/javascript">
+	var djConfig = {isDebug: true, debugAtAllCosts: false};
+</script>			
+
+
+    <script type="text/javascript" src="dojo/dojo.js"></script>
+    <script type="text/javascript">
+        dojo.require("dojo.event.*");       // sophisticated AOP event handling
+        dojo.require("dojo.io.*");          // for Ajax requests
+        dojo.require("dojo.storage.*");     // a persistent local data cache
+        dojo.require("dojo.json");          // serialization to JSON
+        dojo.require("dojo.dnd.*");         // drag-and-drop
+        dojo.require("dojo.lfx.*");         // animations and eye candy
+        dojo.require("dojo.widget.Editor2");// stable, portable HTML WYSIWYG
+	 </script>
+<!-- dojo  ---->
+
+<script type="text/javascript" src="dojo/dojo.js"></script>
+<script type="text/javascript">
+	dojo.require("dojo.widget.*");
+</script>
+
+<script>
+	function load_app(id){
+		alert('Icon '+id+' was clicked');
+	}
+</script>
+
+<style>
+
+.dojoHtmlFisheyeListBar {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.outerbar {
+	background-color: #666;
+	text-align: center;
+	position: absolute;
+	left: 0px;
+	
+	width: 100%;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+.page {
+	padding: 60px 20px 20px 20px;
+}
+
+</style>
+        </head>
+        <body>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="273" height="92" align="left" valign="top" bgcolor="#EDD63B"><p><img src="images/setsat_01_r1_c1.jpg" width="273" height="92" align="top" /></td>
+            <td width="36%" height="92" bgcolor="#EDD63B">&nbsp;</td>
+            <td width="39%" height="92" align="right" valign="middle" bgcolor="#EDD63B"><img src="images/setsat_01_r1_c3.jpg" width="429" height="92" /></td>
+          </tr>
+          <tr>
+            <td colspan="3">
+
+
+<div class="outerbar">
+
+<div dojoType="FisheyeList"
+	itemWidth="50" itemHeight="50"
+	itemMaxWidth="200" itemMaxHeight="200"
+	orientation="horizontal"
+	effectUnits="2"
+	itemPadding="10"
+	attachEdge="top"
+	labelEdge="bottom"
+	enableCrappySvgSupport="false"
+>
+
+	<div dojoType="FisheyeListItem" onClick="load_app(1);" 
+		iconsrc="images/admin/Home.gif" caption="Home">	</div>
+
+	<div dojoType="FisheyeListItem" onClick="load_app(2);"
+		iconsrc="images/admin/Strategic_Framework.png" caption="Strategic Framework">	</div>
+
+	<div dojoType="FisheyeListItem" onClick="load_app(3);"
+		iconsrc="images/admin/Business_Plan.png" caption="Business Plan">	</div>
+
+	<div dojoType="FisheyeListItem" onClick="load_app(4);"
+		iconsrc="images/admin/Business_Process.png" caption="Business Process">	</div>
+
+	<div dojoType="FisheyeListItem" onClick="load_app(5);"
+		iconsrc="images/admin/Performance_Measure.png" caption="Performance Measure">	</div>
+
+	<div dojoType="FisheyeListItem" onClick="load_app(6);"
+		iconsrc="images/admin/Risk_Management.gif" caption="Risk Management" >	</div>
+	
+	<div dojoType="FisheyeListItem" onClick="load_app(7);"
+		iconsrc="images/admin/Review_Module.png" caption="Review Module" >	</div>
+	
+	<div dojoType="FisheyeListItem" onClick="load_app(8);"
+		iconsrc="images/admin/Help.gif" caption="Help" >	</div>
+</div>
+</div></td>
+          </tr>
+          <tr>
+            <td colspan="3">dsdsd</td>
+          </tr>
+          <tr>
+            <td colspan="3"><table>
+              <tbody>
+                <tr>
+                  <td style="vertical-align:top;"><form action="" onsubmit="return false;">
+                      <h4>Dropdown:</h4>
+                    <div dojotype="dropdowndatepicker"></div>
+                  </form></td>
+                </tr>
+              </tbody>
+            </table></td>
+          </tr>
+          <tr>
+            <td colspan="3">&nbsp;</td>
+          </tr>
+        </table>
+		<h4>&nbsp;</h4>
+              
+
+
+
+</body>
+</html>

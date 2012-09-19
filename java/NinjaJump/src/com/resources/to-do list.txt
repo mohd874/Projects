@@ -1,0 +1,7 @@
+- dead------------------------DONE 100%!
+- random pattern
+- tile set---------           DONE 50%
+- sound effect
+- music
+- background------------------DONE 100%
+- power ups

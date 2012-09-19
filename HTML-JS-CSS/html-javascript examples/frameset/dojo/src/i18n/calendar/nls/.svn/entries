@@ -1,0 +1,103 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/src/i18n/calendar/nls
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+zh-cn
+dir
+
+gregorianExtras.js
+file
+
+
+
+
+2007-03-15T22:18:04.000000Z
+788a1a365710387bcc325af86dab210d
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+zh
+dir
+
+zh-hk
+dir
+
+pt
+dir
+
+pt-br
+dir
+
+de
+dir
+
+sv
+dir
+
+gregorian.js
+file
+
+
+
+
+2007-03-15T22:18:04.000000Z
+154323ec0a7e6def02b2fcce6a31ed83
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+ja
+dir
+
+README
+file
+
+
+
+
+2007-03-15T22:03:58.000000Z
+4c77115e7cadfc7d4fb7bd88e7b135dd
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+fi
+dir
+
+en
+dir
+
+es
+dir
+
+fr
+dir
+
+ko
+dir
+
+zh-tw
+dir
+
+nl
+dir
+
+hu
+dir
+
+it
+dir
+

@@ -1,0 +1,70 @@
+
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<style>
+table, th, td {
+	border:1px solid black;
+}
+</style>
+
+<script type="text/javascript" charset="utf-8">
+        $(document).ready(function(){
+		var json = [{"firstName":"Mohamed","lastName":"Al-Habshi","books":[{"title":"Java Basics","ISBN":"796","description":"The first book to read about java","id":2}],"id":1},{"firstName":"Mohamed Saeed","lastName":"Al Hamlie","books":[],"id":4}];
+		
+			$('#results').html('');
+			var books;
+			$.each(json, function(i, val) {
+				$('#results').append('<tr>');
+
+				$('#results').append('<td id=\"fn'+i+'\">');
+				$('#results').append('</td>');
+				$('#fn'+i).append(val['firstName']);				
+
+				$('#results').append('<td id=\"ln'+i+'\">');
+				$('#results').append('</td>');
+				$('#ln'+i).append(val['lastName']);				
+
+				$('#results').append('<td id=\"bk'+i+'\">');
+				$('#results').append('</td>');
+				$('#bk'+i).append('<ul id=\"BooksList'+i+'\">');
+				$('#bk'+i).append('</ul>');		
+				books = val['books'];
+				if(books.length > 0){
+					$('#BooksList'+i).append('<li id=\"book'+i+''+0+'\">');
+					$('#BooksList'+i).append('</li>');					
+					$('#book'+i+''+0).append('No Books');
+
+				}else{
+					$.each(books, function(y, books) {
+						$('#BooksList'+i).append('<li id=\"book'+i+''+y+'\">');
+						$('#BooksList'+i).append('</li>');
+						$('#book'+i+''+y).append(books['title']);
+					});
+				}
+
+				$('#results').append('</tr>');
+				});
+	});
+</script>
+
+<br />
+
+<table>
+  <thead>
+    <tr>
+      <th>
+        First Name
+      </th>
+      <th>
+        Last Name
+      </th>
+      <th>
+        Books
+      </th>
+    </tr>
+  <thead>
+  <tbody id="results">
+  
+  </tbody>
+</table>

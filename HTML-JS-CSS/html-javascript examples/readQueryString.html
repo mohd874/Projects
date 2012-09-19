@@ -1,0 +1,30 @@
+<html>
+
+<head>
+
+<script language="JavaScript">
+function getQueryString(){
+	var fullURL = parent.document.URL;
+	if(fullURL.indexOf('?') > 0){
+		var xxx = fullURL.substring(fullURL.indexOf('?')+8, fullURL.length);
+	}
+	document.form1.test.value=xxx;
+	if(xxx == ""){
+		//window.location = xxx;
+	}
+	return xxx;
+}
+</script>
+
+</head>
+
+
+<body onload="javascript: getQueryString()">
+
+<form name="form1">
+add '?' mark at the end of the url to add papameters. e.g. '?param=hello'.<input type="text" id="test" name="test"> <p />
+</form>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<html>
+
+<head>
+<title>
+Fusion Charts Example
+</title>
+</head>
+
+<body>
+<script language="JavaScript" src="./javascript/FusionCharts.js"></script>
+<table>
+<tr>
+		<td>
+			  <div id="chartdivColumn" align="center">
+	         	The chart will appear within this DIV. This text will be replaced by the chart.
+	    	  </div>
+		      <script type="text/javascript">
+		         var myChart = new FusionCharts("./Charts/MSLine.swf", "GanttChart", "900", "280", "0", "1");
+		         myChart.setDataURL("Data/data.xml");
+		         myChart.render("chartdivColumn");
+		      </script>
+	  		
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

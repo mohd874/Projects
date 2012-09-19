@@ -1,0 +1,130 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/src/data/old
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+Observable.js
+file
+
+
+
+
+2007-03-15T22:18:02.000000Z
+27cb4b0a2985b7097c81bbfcc0f764ad
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+Kind.js
+file
+
+
+
+
+2007-03-15T22:18:02.000000Z
+f69e77c801e12de1423a2e9e85562678
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+__package__.js
+file
+
+
+
+
+2007-03-15T22:18:02.000000Z
+d86c22416483f67554055a5cb090882c
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+to_do.txt
+file
+
+
+
+
+2007-03-15T22:03:56.000000Z
+84efaf13234739238df64ee775c1e3fb
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+ResultSet.js
+file
+
+
+
+
+2007-03-15T22:18:02.000000Z
+bea8a6ffe1b4a52d1199471d0ec9b7d3
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+Value.js
+file
+
+
+
+
+2007-03-15T22:18:02.000000Z
+042c592ba80ddad8e4491e37cb6d0ab8
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+format
+dir
+
+Item.js
+file
+
+
+
+
+2007-03-15T22:18:02.000000Z
+e8f4e504b9accba76b7d6e0a86a8e673
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+provider
+dir
+
+Type.js
+file
+
+
+
+
+2007-03-15T22:18:02.000000Z
+f95fbe7f259859f269c64ee53a24d402
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+Attribute.js
+file
+
+
+
+
+2007-03-15T22:18:02.000000Z
+426216f795adbbf39a0f7be36fb2d9af
+2007-09-19T06:53:55.028159Z
+341
+mo
+

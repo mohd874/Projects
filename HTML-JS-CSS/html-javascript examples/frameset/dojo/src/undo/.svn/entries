@@ -1,0 +1,52 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/src/undo
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+__package__.js
+file
+
+
+
+
+2007-03-15T22:18:06.000000Z
+6088588b19c410aea596e4cc7594215f
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+Manager.js
+file
+
+
+
+
+2007-03-15T22:18:06.000000Z
+3af81c059cad3a39ef80b4ee83f6129e
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+browser.js
+file
+
+
+
+
+2007-03-15T22:18:06.000000Z
+93105a7b00b8a0f410d688b6384aec79
+2007-09-19T06:53:55.028159Z
+341
+mo
+

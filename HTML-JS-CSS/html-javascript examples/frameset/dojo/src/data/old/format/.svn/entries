@@ -1,0 +1,40 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/src/data/old/format
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+Json.js
+file
+
+
+
+
+2007-03-15T22:18:02.000000Z
+63b73f951d5cc0c70dba1bfd42b5ba36
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+Csv.js
+file
+
+
+
+
+2007-03-15T22:18:02.000000Z
+d318bc9d6c3a8db197b1c550f70375e5
+2007-09-19T06:53:55.028159Z
+341
+mo
+

@@ -1,0 +1,40 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/tests/validate
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+test_validate.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+a5f1e219d21330bbd51e89a11d152d8a
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_creditCard.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+00c6c4438d8911a56e650a4a03df3995
+2007-09-19T06:53:55.028159Z
+341
+mo
+

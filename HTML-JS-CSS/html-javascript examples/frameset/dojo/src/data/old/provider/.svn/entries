@@ -1,0 +1,76 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/src/data/old/provider
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+MySql.js
+file
+
+
+
+
+2007-03-15T22:18:02.000000Z
+743739190197b1d729a95f79a55045fa
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+FlatFile.js
+file
+
+
+
+
+2007-03-15T22:18:02.000000Z
+7e63a0723d6fc440da430d003c7c0211
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+Base.js
+file
+
+
+
+
+2007-03-15T22:18:02.000000Z
+1aaf90e6750bb4618930f2bd0a1f9fce
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+Delicious.js
+file
+
+
+
+
+2007-03-15T22:18:02.000000Z
+51fe0b07a6857a04e79f82fdc09b5a81
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+JotSpot.js
+file
+
+
+
+
+2007-03-15T22:18:02.000000Z
+91e39b3bde17b7be8fd0ff9ae51d7bf3
+2007-09-19T06:53:55.028159Z
+341
+mo
+

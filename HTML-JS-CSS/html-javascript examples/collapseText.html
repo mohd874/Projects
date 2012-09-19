@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>
+Collapse Text
+</title>
+
+</head><body><script>
+function expand(thistag, tag) {
+   styleObj=document.getElementById(thistag).style;
+   if (styleObj.display=='none')
+   {
+   	styleObj.display='';
+	tag.innerHTML = "Click here to hide";
+   }
+   else {
+   	styleObj.display='none';
+    tag.innerHTML = "Click here to show";
+   }
+}
+</script>
+
+<div onclick="expand('text1', this);" id="div1">Click here to hide</div>
+
+<p style="color: blue; background-color: rgb(193, 193, 193);" id="text1">
+
+Contents of the p tag</p></body></html>

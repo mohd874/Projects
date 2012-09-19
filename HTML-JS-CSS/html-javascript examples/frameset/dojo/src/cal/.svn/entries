@@ -1,0 +1,40 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/src/cal
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+textDirectory.js
+file
+
+
+
+
+2007-03-15T22:17:58.000000Z
+376550636014d085f48e6199d9fb70b6
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+iCalendar.js
+file
+
+
+
+
+2007-03-15T22:17:58.000000Z
+3fd1aa2b4dbeb77cbb948d644c8c0e14
+2007-09-19T06:53:55.028159Z
+341
+mo
+

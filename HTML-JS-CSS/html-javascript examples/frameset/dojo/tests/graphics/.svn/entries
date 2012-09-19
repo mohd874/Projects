@@ -1,0 +1,40 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/tests/graphics
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+test_color.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+835a7e30261ba0decad354d3def044a8
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_Colorspace.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+fe724fd91103380ca5c02ad2ba42313a
+2007-09-19T06:53:55.028159Z
+341
+mo
+

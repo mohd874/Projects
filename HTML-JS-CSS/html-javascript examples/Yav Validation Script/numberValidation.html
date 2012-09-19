@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Yav Validation Example</title>
+<script src="yav.js" type="text/javascript"></script>
+<script src="yav-config.js" type="text/javascript"></script>
+ <SCRIPT>
+//only for test purposes
+function checkOnSubmit(formName, r) {
+    document.getElementById(yav_config.errorsdiv).className = '';
+    document.getElementById(yav_config.errorsdiv).style.display = 'none';
+    var alertType = document.getElementById('alertType').value;
+    if (yav.performCheck(formName, r, alertType)) {
+        alert('Form validated (you usually submit your form now)');
+    } else if (alertType=='jsVar') {
+        alert('jsErrors variable contains the array of errors:\n\n' +jsErrors + '\n\n Use this variable like you prefer!');
+    }
+}
+
+var rules2=new Array();
+rules2[0]='frequency|required';
+rules2[1]='activation:Activation date|date';
+rules2[2]='deactivation:Dectivation date|date';
+rules2[3]='activation:Activation date|date_lt|$deactivation:Dectivation date';
+rules2[4]='activation|mask|date';
+rules2[5]='deactivation|mask|date';
+yav.addHelp('frequency', 'Provide the frequency of notification you prefer');
+yav.addHelp('activation', 'Provide the activation date of the service');
+yav.addHelp('deactivation', 'Provide the deactivation date of the service');
+yav.addMask('date', '  -  -    ', '1234567890');
+
+</SCRIPT>
+
+</head>
+
+<body onload="yav.init('exampleForm', rules2);">
+<div id="errorsDiv"></div>
+<form name="form1" onsubmit="performCheck('form1', rules, 'innerHtml');return false;">
+ <script type="text/javascript">
+  	var rules=new Array();
+	var i = 0;
+	rules[i]='input1|double|Your input is not a number';i++;
+	rules[i]='input1|numrange|0-9999999999|Your input value must be in range (-10 - 10)';i++;
+	
+	function performCheck(form,rules,view){
+		var valid = yav.performCheck(form,rules,view);
+		if(valid){
+			alert("Valid");
+		}else{
+			alert("Invalid");
+		}
+	}
+  </script>
+ <strong>This example will show you how to validate a number using YAV library</strong><br>
+<input type=text value="0" id="input1" name="input1"/>
+<input type=submit value="validate" onclick="javascript:validateNumber()"/>
+</form>
+</body>
+</html>

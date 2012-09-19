@@ -1,0 +1,40 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/src/flash/flash8
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+DojoExternalInterface.as
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+c3d2ad1496131b3e20f931c9f5e83db2
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+ExpressInstall.as
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+85b22abdf1c8f956f878922a2aecc319
+2007-09-19T06:53:55.028159Z
+341
+mo
+

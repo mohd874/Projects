@@ -1,0 +1,67 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/tests/i18n
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+test_number.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+801d0b8a9d784abb3171408705caeaef
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_strings.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+0400935ca21edc196f23661ea32d175c
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+nls
+dir
+
+test_currency.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+6ea82b28bb3dd62944e6ee0721092780
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_strings2.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+6fb74196e6264e7157a2c01d930d2f02
+2007-09-19T06:53:55.028159Z
+341
+mo
+

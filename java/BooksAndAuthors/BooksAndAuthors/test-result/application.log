@@ -1,0 +1,136 @@
+24 Jun 2010 11:26:00,171 INFO  ~ Starting D:\workspace\BooksAndAuthors
+24 Jun 2010 11:26:00,171 INFO  ~ Module search is available (D:\play-1.0.2.1\modules\search)
+24 Jun 2010 11:26:00,171 INFO  ~ Module crud is available (D:\play-1.0.2.1\modules\crud)
+24 Jun 2010 11:26:00,812 INFO  ~ 
+24 Jun 2010 11:26:00,812 INFO  ~ Go to http://localhost:9000/@tests to run the tests
+24 Jun 2010 11:26:00,812 INFO  ~ 
+24 Jun 2010 11:26:00,812 WARN  ~ You're running Play! in DEV mode
+24 Jun 2010 11:26:00,921 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+24 Jun 2010 11:26:09,296 INFO  ~ Connected to jdbc:hsqldb:mem:playembed
+24 Jun 2010 11:26:10,093 INFO  ~ Application 'Books And Authors' is now started !
+24 Jun 2010 11:26:10,343 INFO  ~ Rebuild index finished
+24 Jun 2010 11:26:19,531 ERROR ~ 
+
+@630pkm18c
+Internal Server Error (500) for request POST /application/search?qString=a
+
+Oops: UnexpectedException
+An unexpected error occured caused by exception UnexpectedException: Unexpected Error
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.modules.search.Search$Query.fetch(Search.java:165)
+	at controllers.Application.search(Application.java:35)
+	at play.utils.Java.invokeStatic(Java.java:129)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:139)
+	at Invocation.HTTP Request(Play!)
+Caused by: play.exceptions.UnexpectedException: Unexpected Error
+	at play.modules.search.Search$Query.executeQuery(Search.java:246)
+	at play.modules.search.Search$Query.fetch(Search.java:158)
+	... 4 more
+Caused by: play.exceptions.UnexpectedException: Cannot open index
+	at play.modules.search.Search.getIndexReader(Search.java:343)
+	at play.modules.search.Search$Query.executeQuery(Search.java:206)
+	... 5 more
+Caused by: play.exceptions.UnexpectedException: Could not find models.Author index. Please re-index
+	at play.modules.search.Search.getIndexReader(Search.java:338)
+	... 6 more
+24 Jun 2010 11:26:20,187 ERROR ~ 
+
+@630pkm18g
+Internal Server Error (500) for request POST /application/search?qString=a
+
+Oops: UnexpectedException
+An unexpected error occured caused by exception UnexpectedException: Unexpected Error
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.modules.search.Search$Query.fetch(Search.java:165)
+	at controllers.Application.search(Application.java:35)
+	at play.utils.Java.invokeStatic(Java.java:129)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:139)
+	at Invocation.HTTP Request(Play!)
+Caused by: play.exceptions.UnexpectedException: Unexpected Error
+	at play.modules.search.Search$Query.executeQuery(Search.java:246)
+	at play.modules.search.Search$Query.fetch(Search.java:158)
+	... 4 more
+Caused by: play.exceptions.UnexpectedException: Cannot open index
+	at play.modules.search.Search.getIndexReader(Search.java:343)
+	at play.modules.search.Search$Query.executeQuery(Search.java:206)
+	... 5 more
+Caused by: play.exceptions.UnexpectedException: Could not find models.Author index. Please re-index
+	at play.modules.search.Search.getIndexReader(Search.java:338)
+	... 6 more
+24 Jun 2010 11:26:21,015 ERROR ~ 
+
+@630pkm18k
+Internal Server Error (500) for request POST /application/search?qString=a
+
+Oops: UnexpectedException
+An unexpected error occured caused by exception UnexpectedException: Unexpected Error
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.modules.search.Search$Query.fetch(Search.java:165)
+	at controllers.Application.search(Application.java:35)
+	at play.utils.Java.invokeStatic(Java.java:129)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:139)
+	at Invocation.HTTP Request(Play!)
+Caused by: play.exceptions.UnexpectedException: Unexpected Error
+	at play.modules.search.Search$Query.executeQuery(Search.java:246)
+	at play.modules.search.Search$Query.fetch(Search.java:158)
+	... 4 more
+Caused by: play.exceptions.UnexpectedException: Cannot open index
+	at play.modules.search.Search.getIndexReader(Search.java:343)
+	at play.modules.search.Search$Query.executeQuery(Search.java:206)
+	... 5 more
+Caused by: play.exceptions.UnexpectedException: Could not find models.Author index. Please re-index
+	at play.modules.search.Search.getIndexReader(Search.java:338)
+	... 6 more
+24 Jun 2010 11:26:49,234 ERROR ~ 
+
+@630pkm18o
+Internal Server Error (500) for request POST /application/search?qString=a
+
+Oops: UnexpectedException
+An unexpected error occured caused by exception UnexpectedException: Unexpected Error
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.modules.search.Search$Query.fetch(Search.java:165)
+	at controllers.Application.search(Application.java:35)
+	at play.utils.Java.invokeStatic(Java.java:129)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:139)
+	at Invocation.HTTP Request(Play!)
+Caused by: play.exceptions.UnexpectedException: Unexpected Error
+	at play.modules.search.Search$Query.executeQuery(Search.java:246)
+	at play.modules.search.Search$Query.fetch(Search.java:158)
+	... 4 more
+Caused by: play.exceptions.UnexpectedException: Cannot open index
+	at play.modules.search.Search.getIndexReader(Search.java:343)
+	at play.modules.search.Search$Query.executeQuery(Search.java:206)
+	... 5 more
+Caused by: play.exceptions.UnexpectedException: Could not find models.Author index. Please re-index
+	at play.modules.search.Search.getIndexReader(Search.java:338)
+	... 6 more
+24 Jun 2010 11:26:49,875 ERROR ~ 
+
+@630pkm192
+Internal Server Error (500) for request POST /application/search?qString=a
+
+Oops: UnexpectedException
+An unexpected error occured caused by exception UnexpectedException: Unexpected Error
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.modules.search.Search$Query.fetch(Search.java:165)
+	at controllers.Application.search(Application.java:35)
+	at play.utils.Java.invokeStatic(Java.java:129)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:139)
+	at Invocation.HTTP Request(Play!)
+Caused by: play.exceptions.UnexpectedException: Unexpected Error
+	at play.modules.search.Search$Query.executeQuery(Search.java:246)
+	at play.modules.search.Search$Query.fetch(Search.java:158)
+	... 4 more
+Caused by: play.exceptions.UnexpectedException: Cannot open index
+	at play.modules.search.Search.getIndexReader(Search.java:343)
+	at play.modules.search.Search$Query.executeQuery(Search.java:206)
+	... 5 more
+Caused by: play.exceptions.UnexpectedException: Could not find models.Author index. Please re-index
+	at play.modules.search.Search.getIndexReader(Search.java:338)
+	... 6 more

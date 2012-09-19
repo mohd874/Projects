@@ -1,0 +1,103 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/tests/i18n/nls
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+en-us-new_york-brooklyn
+dir
+
+zh-cn
+dir
+
+yi
+dir
+
+salutations.js
+file
+
+
+
+
+2007-03-15T22:17:36.000000Z
+2d099f63a975c2e7cf98400ca70201b6
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+pt
+dir
+
+tr
+dir
+
+ru
+dir
+
+fa
+dir
+
+en-us-hawaii
+dir
+
+de
+dir
+
+sw
+dir
+
+ja
+dir
+
+he
+dir
+
+el
+dir
+
+hi
+dir
+
+ar
+dir
+
+en-au
+dir
+
+cs
+dir
+
+es
+dir
+
+fr
+dir
+
+en-us-texas
+dir
+
+ko
+dir
+
+zh-tw
+dir
+
+pl
+dir
+
+th
+dir
+
+it
+dir
+

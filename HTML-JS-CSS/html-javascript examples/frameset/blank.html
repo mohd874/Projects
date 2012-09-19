@@ -1,0 +1,16 @@
+<html>
+<head>
+<script language="JavaScript">
+function hideFrame(){
+// the first one is if you want to remove the side frame...
+ parent.document.all("TopFrame").all("MiddleFrame").cols="100%,*";
+// the next one removes the top frame
+//parent.document.all("TopFrame").rows="*,100%"
+}
+</script>
+<title>Blank</title>
+</head>
+<body>
+<input type = "button" value="test" onClick="hideFrame();">
+</body>
+</html>

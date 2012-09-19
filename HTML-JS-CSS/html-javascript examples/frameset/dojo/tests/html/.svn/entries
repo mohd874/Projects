@@ -1,0 +1,52 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/tests/html
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+test_csshack.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+700fd92b299f7ae7c0f2a42a994bf7e4
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+ie_byId_bug.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+ba66576b4d7e8cb80655895640f26fa9
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_metrics.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+c52233106cb8aa04fe18890dde288125
+2007-09-19T06:53:55.028159Z
+341
+mo
+

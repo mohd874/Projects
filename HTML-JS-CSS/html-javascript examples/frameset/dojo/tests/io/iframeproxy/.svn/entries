@@ -1,0 +1,76 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/tests/io/iframeproxy
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+test_BrowserIO_ifp.timeout.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+a110e4000152c1f82bb14ca1f5d78d11
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_BrowserIO_ifp.error.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+f8d37dd31b4a4e6e88028d76fcae6fbf
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_BrowserIO_ifp.frag.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+d7493d7b706ea92cef5c088cc14e1c11
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_BrowserIO_ifp.method.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+9cfe0b7b8c804c0b17cf20f1659b2581
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_BrowserIO_ifp.html
+file
+
+
+
+
+2007-03-15T22:04:08.000000Z
+7cc960b2987f157b9c33c9d111ab9d07
+2007-09-19T06:53:55.028159Z
+341
+mo
+

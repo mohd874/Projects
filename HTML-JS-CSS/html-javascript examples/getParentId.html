@@ -1,0 +1,31 @@
+<html>
+<head>
+<script>
+function getChildId(link){
+
+	var parent = link.parentNode;
+	var textField = parent.childNodes[0];
+
+	alert("parent id: "+link.parentNode.id);
+	for(var x=0; x<link.parentNode.childNodes.length;x++){
+		var currentId = link.parentNode.childNodes[x].id;
+		if(currentId == 'text1'){
+			alert("text value: "+link.parentNode.childNodes[x].id+" in slot "+x);
+		}
+	}
+}
+</script>
+</head>
+
+<body>
+	<div name="div1" id="div1" >
+		<input type="text" value="this is a text" id="text1" name="text1"/>
+		<br />
+		<br />
+		<a href="#" onclick="getChildId(this)" id="link" name="link">
+			getChildId
+		</a>
+	</div>
+</body>
+
+</html>

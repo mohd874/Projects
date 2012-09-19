@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>3 Column CSS Layout</title>
+<style type="text/css">
+<!--
+html,body {
+margin:0 auto;
+height:100%;
+background-color:#336699;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+padding: 0px;
+}
+#container {
+width:780px;
+margin:0 auto;
+background-color:#ffffff;
+border: 1px solid #000000;
+padding: 10px 0px 0px;
+}
+#header {
+background:#ffffff;
+padding: 15px 5px;
+}
+#menu {
+background:#336699;
+border-bottom-width: 20px;
+border-bottom-style: solid;
+border-bottom-color: #6296CA;
+}
+#title {
+background:#FFFFFF;
+font-family: Arial, Helvetica, sans-serif;
+color: #FF9900;
+padding: 10px 15px 0px;
+}
+#main{
+width:750px;
+margin:0 auto;
+background-color:#ffffff;
+padding: 0px;
+}
+#left-col,#right-col{
+width:240px;
+float:left;
+margin:0 auto;
+}
+#mid-col {
+width:250px;
+float:left;
+
+border-right-width: 10px;
+border-left-width: 10px;
+border-right-style: solid;
+border-left-style: solid;
+border-right-color: #FFFFFF;
+border-left-color: #FFFFFF;
+}
+#footer {
+clear:both;
+text-align:center;
+background-color:#ffffff;
+height:20px;
+}
+h1 {
+font-family: Arial, Helvetica, sans-serif;
+margin: 0px;
+padding: 0px 0px 10px;
+border: 0px;
+}
+h2 {
+font-family: Arial, Helvetica, sans-serif;
+margin: 0px;
+color: #006699;
+background-color: #CCCCCC;
+padding: 2px 5px;
+border-bottom-width: 5px;
+border-bottom-style: solid;
+border-bottom-color: #FFFFFF;
+}
+h3 {
+font-family: Arial, Helvetica, sans-serif;
+margin: 0px;
+color: #FFFFFF;
+font-weight: normal;
+text-decoration: none;
+border: 0px none;
+padding: 0px;
+}
+h4 {
+font-family: Arial, Helvetica, sans-serif;
+margin: 0px;
+}
+h5 {
+font-family: Arial, Helvetica, sans-serif;
+margin: 0px;
+}
+p {
+font-family: Arial, Helvetica, sans-serif;
+margin: 0px;
+color: #666666;
+}
+#dropstaff{
+background-color: #0099CC;
+border-top: none;
+border-right: none;
+border-bottom: 2px solid #FFFFFF;
+border-left: none;
+text-align: right;
+padding-right: 10px;
+}
+#droptrips{
+background-color: #CC3333;
+border-top: none;
+border-right: none;
+border-bottom: 2px solid #FFFFFF;
+border-left: none;
+text-align: right;
+padding-right: 10px;
+}
+#dropwork{
+background-color: #CC3333;
+border-top: none;
+border-right: none;
+border-bottom: 2px solid #FFFFFF;
+border-left: none;
+text-align: right;
+padding-right: 10px;
+}
+#dropcareers{
+background-color: #0099CC;
+border-top: none;
+border-right: none;
+border-bottom: 2px solid #FFFFFF;
+border-left: none;
+text-align: right;
+padding-right: 10px;
+}
+a {
+font-family: Arial, Helvetica, sans-serif;
+margin: 0px;
+border: 0px none;
+padding: 0px;
+}
+img {
+border: 0px none;
+list-style-position: outside;
+margin: 0px;
+padding: 0px;
+}
+-->
+</style>
+<script language="javascript">
+function togglediv(divid){
+if(document.getElementById(divid).style.display == 'none'){
+document.getElementById(divid).style.display = 'block';
+}else{
+document.getElementById(divid).style.display = 'none';
+}
+}
+</script>
+</head>
+
+<body>
+<br/>
+<div id="container">
+<div id="header"><img src="../images/fcclogo.gif" width="350" height="60"><img src="../images/clear.gif" alt="spacer image" width="30" height="8">
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="380" height="60">
+<param name="movie" value="../fcc.swf">
+<param name="quality" value="high">
+<embed src="../fcc.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="380" height="60"></embed>
+</object>
+</div>
+<div id="menu">.</div>
+<div id="title">
+<h1>Title - h1</h1>
+</div>
+<div id="main">
+<div id="left-col">
+<h2>left-col - h2 </h2>
+<P>Left Col - P</P>
+<P>&nbsp;</P>
+</div>
+<div id="mid-col">mid-col</div>
+<div id="right-col">
+
+<a href="javascript:;" onmousedown="togglediv('staff');">
+<div id="dropstaff">
+<img src="../images/clear.gif" width="1" height="1"><h3>Staff</h3>
+</div>
+</a>
+
+<div id="staff" style="display:none">
+<div align="left">
+<p>Drop Down Box </p>
+<p>&nbsp; </p>
+</div>
+</div>
+
+<a href="javascript:;" onmousedown="togglediv('showcase');">
+<div id="dropwork">
+<h3>Student Showcase</h3>
+</div></a>
+<div id="showcase" style="display:none">
+<p>anything in here</p>
+<div align="left">
+<p>Drop Down Box </p>
+<p>&nbsp; </p>
+</div>
+</div>
+</div>
+<div id="footer">3 Column CSS Layout</div>
+</div></div>
+</body>
+</html> 

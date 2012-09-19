@@ -1,0 +1,55 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/tests/widget/namespaces
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+myns
+dir
+
+test_myns.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+866f63ac122a930458a5b41c10ff305b
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_more_widgets.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+c2a1ace9e0f519f14555bac7f4f6a2d5
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+test_myns_dynamic.html
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+f247877e7434fd222d9b20579e9d51a3
+2007-09-19T06:53:55.028159Z
+341
+mo
+

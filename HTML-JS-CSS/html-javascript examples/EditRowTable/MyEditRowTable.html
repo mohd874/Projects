@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<script language="javascript">
+function togglediv(divid){
+if(document.getElementById(divid).style.display == 'none'){
+document.getElementById(divid).style.display = 'block';
+}else{
+document.getElementById(divid).style.display = 'none';
+}
+}
+function showHide(showMe,hideMe,id){
+document.getElementById(showMe+id).style.display = 'block';
+document.getElementById(hideMe+id).style.display = 'none';
+}
+</script>
+</head>
+
+<body>
+<table width="40%" border="0">
+  <tr>
+    <th scope="col">action</th>
+    <th scope="col">name</th>
+    <th scope="col">job</th>
+  </tr>
+  <tr>
+    <td><div id="visiable1" style="display:block"> <a href="#" onclick="showHide('hidden','visiable',1)">edit</a> </div>
+		<div id="hidden1" style="display:none"> <a href="#" onclick="showHide('visiable','hidden',1)">cancel</a> </div></td>
+    <td>Ali</td>
+    <td>Manager</td>
+  </tr>
+  <tr>
+    <td><div id="visiable2" style="display:none"> <a href="#">edit</a> </div>
+		<div id="hidden2" style="display:none">  <a href="#">cancel</a> </div> </td>
+    <td>salem</td>
+    <td>Accountant</td>
+  </tr>
+</table>
+</body>
+</html>

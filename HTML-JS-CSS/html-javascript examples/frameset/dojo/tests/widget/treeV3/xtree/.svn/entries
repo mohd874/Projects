@@ -1,0 +1,52 @@
+8
+
+dir
+386
+svn://192.168.1.15/trunk/VIMSWeb/WebContent/javascript/dojo/tests/widget/treeV3/xtree
+svn://192.168.1.15
+
+
+
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+
+svn:special svn:externals svn:needs-lock
+
+xtree.js
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+820909a93d1a568aafb482f661c0515c
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+LICENSE
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+3b83ef96387f14655fc854ddc3c6bd57
+2007-09-19T06:53:55.028159Z
+341
+mo
+
+xtree.css
+file
+
+
+
+
+2007-03-15T22:04:06.000000Z
+93993fceb4b76525ba58249f899fa2a2
+2007-09-19T06:53:55.028159Z
+341
+mo
+
