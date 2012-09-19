@@ -1,0 +1,75 @@
+#{extends 'main.html' /}
+#{set title:p /}
+
+<table>
+    <tr>
+        <th>
+            Name:
+        </th>
+        <td>
+            ${p.toString()}
+        </td>
+    </tr>
+    <tr>
+        <th>
+            D.O.B:
+        </th>
+        <td>
+            ${p.dateOfBirth}
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Description:
+        </th>
+        <td>
+            ${p.description}
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Father:
+        </th>
+        <td>
+            #{ifnot father}
+            No Father!
+            #{/ifnot}
+            #{else}
+            <a href="@{Application.show(father.id)}">${father.toString()}</a>
+            #{/else}
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Mother:
+        </th>
+        <td>
+            ${p.mother}
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Spouse:
+        </th>
+        <td>
+            ${p.spouse}
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Children:
+        </th>
+        <td>
+            #{ifnot p.children}
+            No Children
+            #{/ifnot}
+            <ul>
+                #{list items:p.children, as:'child'}
+                <li>
+                    <a href="@{Application.show(child.id)}">${child.toString()}</a>
+                </li>
+                #{/list}
+            </ul>
+        </td>
+    </tr>
+</table>

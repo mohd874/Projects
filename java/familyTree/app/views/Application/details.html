@@ -1,0 +1,100 @@
+#{extends 'main.html' /} #{set title:person.name+' details' /}
+
+<p>
+	<b>Details About: ${person.name}</b>
+</p>
+
+#{form @save(person), enctype:'multipart/form-data'}
+<table>
+	<tr>
+		#{field 'person.name'}
+		<p class="${field.errorClass}">
+		<td><strong>Name:</strong>
+		</td>
+		<td><input type="text" size="10" name="${field.name}"
+			value="${person.name}"> * <span class="error">${field.error}</span>
+		</td>
+		</p>
+		#{/field}
+	</tr>
+	<tr>
+		#{field 'person.dateOfBirth'}
+		<p class="${field.errorClass}">
+		<td><strong>Date of Birth:</strong>
+		</td>
+		<td><input type="text" size="10" name="${field.name}"
+			class="datepicker"
+			value="${person?.dateOfBirth?.format('dd-MM-yyyy')}"> * <span
+			class="error">${field.error}</span>
+		</td>
+		</p>
+		#{/field}
+	</tr>
+	<tr>
+		#{field 'person.dateOfDeath'}
+		<p class="${field.errorClass}">
+		<td><strong>Date of Death:</strong>
+		</td>
+		<td><input type="text" size="10" name="${field.name}"
+			class="datepicker"
+			value="${person?.dateOfDeath?.format('dd-MM-yyyy')}"> * <span
+			class="error">${field.error}</span>
+		</td>
+		</p>
+		#{/field}
+	</tr>
+	<tr>
+		<td><strong>Children: </strong>
+		</td>
+		<td>
+			#{if person.children.size() > 0}
+			<ul>
+				#{list items:person.children, as:'child'}
+					<li>
+						<a href="/Application/details?id=${child.id}">${child.name}</a>
+					</li>
+				#{/list}
+			</ul>
+			#{/if}
+			#{else}
+				There is no children!
+			#{/else}
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<a href="#" id="addChild">Add Child</a>
+		</td>
+	</tr>
+	<tr>
+		#{field 'person.about'}
+		<p class="${field.errorClass}">
+		<td><strong>About: </strong>
+		</td>
+		<td><textarea row="8" col="100" style="width:300px; height: 100px">
+			${person.about}
+		</textarea> <span class="error">${field.error}</span></td>
+		<p>#{/field}
+	</tr>
+	<tr>
+		<td colspan=2>${person.picture}</td>
+	</tr>
+	<tr>
+		<td><input type="submit" value="Proceed"></td>
+		<td><a href="/">cancel</a></td>
+	</tr>
+</table>
+#{/form}
+
+<script type="text/javascript" charset="utf-8">
+	$(function() {
+		$(".datepicker").datepicker({
+			dateFormat : 'dd-mm-yy'
+		});
+	});
+	$("#addChild").click(function(){
+		$.post('@{addChild()}', {childName:prompt('What is the child name?'), childFatherId: ${person.id}}, function(data){
+			location.href = "@{details()}?id=${person.id}";
+		});
+	});
+</script>

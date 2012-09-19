@@ -1,0 +1,16 @@
+Person(F1):
+     name: F1
+     dateOfBirth: 1850-01-01
+#     dateOfDeath:1910-10-10
+
+Person(S1):
+     name: S1     
+     father: F1
+     dateOfBirth:          1870-03-06
+#     dateOfDeath:1960-06-06
+
+# User(bob):
+#     email:          bob@gmail.com
+#     password:       secret
+#     fullname:       Bob
+#     isAdmin:        true

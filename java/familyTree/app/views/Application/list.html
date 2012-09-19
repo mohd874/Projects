@@ -1,0 +1,75 @@
+#{if persons}
+	<div class="table">
+				<img src="${'/public/images/template/'}/bg-th-left.gif" width="8" height="7" alt="" class="left" />
+				<img src="@{'/public/images/template/'}/bg-th-right.gif" width="7" height="7" alt="" class="right" />
+		<table class="listing" cellpadding="0" cellspacing="0"> 
+		  <thead> 
+			<tr> 
+			  <th class="first"> 
+				Name
+			  </th> 
+			  <th> 
+				Father
+			  </th>
+			  <th>
+				Date of Birth
+			  </th>
+			  <th>
+				Date of Death
+			  </th>
+			  <th>
+				About
+			  </th>
+			  <th>
+				Picture
+			  </th>
+			  <th class="last">
+				# Children
+			  </th>
+			</tr> 
+		  <thead> 
+		  <tbody> 
+		  #{list items:persons, as:'person'}
+			<tr class="${(person_index%2==0).yesno('','bg')}"> 
+			  <td class="first style2"> 
+				${person.name}
+			  </td> 
+			  <td> 
+				#{if person.father}
+					${person.father}
+				#{/if}
+			  </td> 
+			  <td>
+				*{
+				${person.dateOfBirth.format('dd/MM/yyyy')}
+				}*
+				${person.dateOfBirth}
+			  </td>
+			  <td>
+				*{
+				${person.dateOfDeath.format('dd/MM/yyyy')}
+				}*
+				${person.dateOfDeath}
+			  </td>
+			  <td>
+				${person.about}
+			  </td>
+			  <td>
+				<img src="${peopleImagesDir+'/'+person.picture}" />
+			  </td>
+			  <td class="last"> 
+					${person.children.size()}
+			  </td> 
+			</tr> 
+		  #{/list}
+		  </tbody> 
+		</table> 
+	</div>
+	<a href="${page+1}" class="nextPage">More Results</a>
+#{/if}
+
+#{else}
+	<p>
+		No one was found!
+	</p>
+#{/else}

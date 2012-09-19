@@ -1,0 +1,15 @@
+#{if _person.children}
+	<ul>
+		#{list items:_person.children, as:'child'}
+			<li class="expandable">
+			<a href="/Application/details?id=${child.id}">${child.name}</a>
+				<div class="hitarea collapsable-hitarea lastCollapsable-hitarea "></div>
+				#{if _person.children}
+					<span class="folder"></span>	
+				#{/if}
+				
+				#{viewChildren person:child /}
+			</li>
+		#{/list}
+	</ul>
+#{/if}

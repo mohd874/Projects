@@ -1,0 +1,16 @@
+#{extends 'administrationTemplate.html' /}
+
+#{if persons}
+	<ul>
+		#{list items:persons, as:'person'}
+			<li>
+				<a href="@{Application.details(person.id)}">
+					${person.name}
+				</a>
+			</li>
+		#{/list}
+	</ul>
+#{/if}
+#{else}
+	&{'admin.persons.notFound'}
+#{/else}

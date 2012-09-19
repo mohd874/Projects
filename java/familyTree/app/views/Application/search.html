@@ -1,0 +1,66 @@
+#{extends 'main.html' /}
+#{set title:'Search Page' /}
+
+<style> 
+table, th, td {
+	border:1px solid black;
+}
+#content{
+	visibility:visible;
+}
+</style> 
+ 
+<div> 
+  <label for="search">Search:</label> 
+  <input type="text" size="100" id="search" name="search" /> 
+</div> 
+ 
+<br /> 
+<div class="content">
+ <div class="results" id="results">
+ 
+ </div>
+</div>
+ 
+<script type="text/javascript" charset="utf-8"> 
+	$(document).ready(function(){
+		// Rebuild state
+		$('#search').val(sessvars.search)    
+		if(sessvars.page == undefined) {
+		    sessvars.page = 1;
+		}
+		if(sessvars.size == undefined) {
+		    sessvars.size = 10;
+		}
+		$('#size option[value='+sessvars.size+']').attr('selected', 'true');
+		
+		// Search function
+		var search = function() {console.log("search function");
+		    sessvars.search = $('#search').val();console.log("get search val");
+//		    sessvars.size = $('#size').val();console.log("get search size");
+			sessvars.size = 10;console.log("get search size");
+		    var listAction = #{jsAction @list(':query', ':fullTextSearch', ':isAjaxCall', ':size', ':page') /};console.log("prepare ajax call");
+		    
+		    $('.results').load(listAction({query : $('#search').attr('value'),  fullTextSearch:false, isAjaxCall:false, size: sessvars.size, page: sessvars.page}),
+		    function() {console.log("callback function");
+		        $('#content').css('visibility', 'visible')
+		    });
+		}
+	
+		// Events handler
+		$('#submit').click(function() {
+		    sessvars.page = 1
+		    search()
+		})
+		$('#search').keyup(function() {console.log("search input event");
+		    sessvars.page = 1
+		    search()
+		})
+		$('.nextPage').live('click', function(e) {
+		    sessvars.page = $(this).attr('href')
+		    e.preventDefault()
+		    search()        
+		})
+		
+	})
+</script> 

@@ -1,0 +1,46 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+#{ifnot persons}
+<p>
+	No one is registered in the database
+</p>
+#{/ifnot}
+
+<ul id="browser" class="filetree treeview-famfamfam treeview">
+	#{list items:persons, as:'person'}
+		<li class="expandable">
+			<a href="/Application/details?id=${person.id}">${person.name}</a>
+			<div class="hitarea collapsable-hitarea lastCollapsable-hitarea "></div>
+			#{if person.children}
+				<span class="folder"></span>	
+			#{/if}
+			
+			#{viewChildren person:person/}
+		</li>
+			
+	#{/list}
+</ul>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#browser").treeview({
+			toggle: function() {
+				console.log("%s was toggled.", $(this).find(">span").text());
+			},
+			 collapsed: true,
+			 unique: true,
+			 persist: "location"
+		});
+		
+		$("#add").click(function() {
+			var branches = $("<li><span class='folder'>New Sublist</span><ul>" + 
+				"<li><span class='file'>Item1</span></li>" + 
+				"<li><span class='file'>Item2</span></li></ul></li>").appendTo("#browser");
+			$("#browser").treeview({
+				add: branches
+			});
+		});
+	});
+</script>
+

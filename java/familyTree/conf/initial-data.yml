@@ -1,0 +1,58 @@
+Person(0)
+  name:F1
+  dateOfBirth:1850-01-01
+  dateOfDeath:2-10-1910
+
+Person(1)
+  name:S1
+  father:F1
+  dateOfBirth:1870-03-06
+  dateOfDeath:6-28-1960
+
+Person(2)
+  name:S2
+  father:F1
+  dateOfBirth:1875-04-02
+  dateOfDeath:6-4-1901
+
+Person(3)
+  name:S3
+  father:F1
+  dateOfBirth:1880-9-6
+  dateOfDeath:3-20-1981
+
+Person(4)
+  name:GS1
+  father:S1
+  dateOfBirth:8-8-1900
+  dateOfDeath:11-5-1964
+
+Person(5)
+  name:GS2
+  father:S1
+  dateOfBirth:6-4-1905
+  dateOfDeath:4-8-1972
+
+Person(6)
+  name:GS3
+  father:S3
+  dateOfBirth:9-9-1904
+  dateOfDeath:9-9-1990
+
+Person(7)
+  name:GS4
+  father:S3
+  dateOfBirth:6-13-1910
+  dateOfDeath:1-1-2000
+
+Person(8)
+  name:GS5
+  father:S3
+  dateOfBirth:2-1-1912
+  dateOfDeath:5-9-2005
+
+Person(9)
+  name:GGS1
+  father:GS1
+  dateOfBirth:6-4-1930
+
