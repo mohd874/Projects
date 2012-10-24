@@ -32,7 +32,16 @@ public class TowerOfHanoi {
 //        solution1();
 //    	solution2();
     	
-    	Deque<Integer> pegA = new ArrayDeque();
+//    	TowerOfHanoi.move(5, 1, 3);
+    	
+//    	solution3();
+    	
+    	
+    }
+
+    
+	private static void solution3() {
+		Deque<Integer> pegA = new ArrayDeque();
         pegA.add(Integer.valueOf(1));
         pegA.add(Integer.valueOf(2));
         pegA.add(Integer.valueOf(3));
@@ -46,15 +55,20 @@ public class TowerOfHanoi {
         	System.out.println("LOOP");
         	move(pegA, pegC);
         	move(pegA, pegB);
-        	move(pegB, pegC);
+        	move(pegC, pegB);
         }
         
         done(pegC);
-    }
+	}
 
+    
 	private static void move(Deque<Integer> from, Deque<Integer> to) {
 		if(!from.isEmpty())
 			to.push(from.pop());
+		else if(!to.isEmpty())
+			from.push(to.pop());
+		else
+			return;
 	}
 
 	private static void solution2() {
