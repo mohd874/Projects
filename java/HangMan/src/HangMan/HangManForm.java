@@ -1,40 +1,38 @@
 /*
  *
  */
-
 package HangMan;
 
-import db.JDBCHelper;
-import db.JDBCManager;
+import db.FileManager;
 import java.awt.Graphics2D;
-import java.awt.event.ActionListener;
 import java.io.File;
-import java.net.URL;
-import java.sql.SQLException;
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.jar.JarEntry;
+import java.util.jar.JarFile;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import sound.MP3;
-import sound.SoundClip;
 
 /**
  *
- * @Author  Mohamed Omar
- *          Mohamed Mohsen
+ * @Author Mohamed Omar Mohamed Mohsen
  *
- * @Function
- * HangManForm.java
- * This one class game that is based on the famous "Hangman" game...you will go though stages tring
- * to solve the secret games and get the highest score
+ * @Function HangManForm.java This one class game that is based on the famous
+ * "Hangman" game...you will go though stages tring to solve the secret games
+ * and get the highest score
  *
  * @Created on May 15, 2007, 9:27 PM
  *
  * @
  *
  */
-
 public class HangManForm extends javax.swing.JFrame {
     
     ArrayList<String> secretWords = null;
@@ -43,40 +41,40 @@ public class HangManForm extends javax.swing.JFrame {
     int numOfTries;
     int correctGuess;
     ArrayList wrongLetters;
-    String secrerWordLetters [];
+    String secrerWordLetters[];
     int foundLetters[];
     Random rand;
     int lblMogOrignalLocationX;
     int lblMogOrignalLocationY;
-    String imagesMog[] = {"Mog_1.gif","Mog_2.gif","Mog_2.gif","Mog_3.gif","Mog_3.gif"};
+    String imagesMog[] = {"Mog_1.gif", "Mog_2.gif", "Mog_2.gif", "Mog_3.gif", "Mog_3.gif"};
     String imagePiranna = "Piranha.gif";
-    String imageFolderPath = "../images/";
     int score;
     int bonus;
-    JDBCHelper jh = null;
-    JDBCManager mng = null;
+//    JDBCHelper jh = null;
+    FileManager mng = null;
     Graphics2D g2d;
     int stageNum = 0;
     boolean continuePlaying = false;
     boolean theBossHasCome = false;
-    
     int VICTORY = 0;
     int INTRO = 1;
     int BATTLE = 2;
     int BOSS = 3;
     int BOSSWARNING = 4;
     int HIGHSCORE = 5;
-    
     MP3 victory;
     MP3 intro;
     MP3 battle;
     MP3 boss;
     MP3 bossWarning;
     MP3 highScore;
-    
     JButton keyBoardBtns[] = new JButton[26];
-    
-    /** Creates new form HangManForm */
+    String soundPackage = "sound/";
+    String imageFolderPath = "images/";
+
+    /**
+     * Creates new form HangManForm
+     */
     public HangManForm() {
         initComponents();
         
@@ -92,15 +90,16 @@ public class HangManForm extends javax.swing.JFrame {
         
         lblMogOrignalLocationX = lblMog.getLocation().x;
         lblMogOrignalLocationY = lblMog.getLocation().y;
-        
-        try {
-            jh = new JDBCHelper();
-            mng = new JDBCManager(jh.getConnection());
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        } catch (ClassNotFoundException ex) {
-            ex.printStackTrace();
-        }
+
+//        try {
+//            jh = new JDBCHelper();
+//            mng = new JDBCManager(jh.getConnection());
+//        } catch (SQLException ex) {
+//            ex.printStackTrace();
+//        } catch (ClassNotFoundException ex) {
+//            ex.printStackTrace();
+//        }
+        mng = new FileManager();
         
         keyBoardBtns[0] = btnA;
         keyBoardBtns[1] = btnB;
@@ -128,7 +127,7 @@ public class HangManForm extends javax.swing.JFrame {
         keyBoardBtns[23] = btnX;
         keyBoardBtns[24] = btnY;
         keyBoardBtns[25] = btnZ;
-        
+
         //restart();
         
         lblTries.setVisible(false);
@@ -141,64 +140,38 @@ public class HangManForm extends javax.swing.JFrame {
         showMainMenuPanel();
     }
     
-    /**
-     *This Method will get all the necessery sound files from the sound package
-     */
-    public void getSoundFiles(){
-        
-        String soundPackage = "../sound/";
-        
-        victory = null;
-        intro = null;
-        battle = null;
-        boss = null;
-        bossWarning = null;
-        highScore = null;
-        
-        
-        String soundFile = "FF_VII_Victory_Fanfare.mp3";
-        URL url = getClass().getResource(soundPackage+soundFile);
-        File file = new File(url.getFile());
-        String absoluteFilePath = file.getAbsolutePath().replace("%20"," ");
-        victory = new MP3(absoluteFilePath);
-        
-        soundFile = "intro_2.mp3";
-        url = getClass().getResource(soundPackage+soundFile);
-        file = new File(url.getFile());
-        absoluteFilePath = file.getAbsolutePath().replace("%20"," ");
-        intro = new MP3(absoluteFilePath);
-        
-        soundFile = "FF_VII_Battle_Theme.mp3";
-        url = getClass().getResource(soundPackage+soundFile);
-        file = new File(url.getFile());
-        absoluteFilePath = file.getAbsolutePath().replace("%20"," ");
-        battle = new MP3(absoluteFilePath);
-        
-        soundFile = "Kingdom_Hearts_FF_VII_One_Winged_Angel.mp3";
-        url = getClass().getResource(soundPackage+soundFile);
-        file = new File(url.getFile());
-        absoluteFilePath = file.getAbsolutePath().replace("%20"," ");
-        boss = new MP3(absoluteFilePath);
-        
-        soundFile = "bossstage.mp3";
-        url = getClass().getResource(soundPackage+soundFile);
-        file = new File(url.getFile());
-        absoluteFilePath = file.getAbsolutePath().replace("%20"," ");
-        bossWarning = new MP3(absoluteFilePath);
-        
-        soundFile = "high_score.mp3";
-        url = getClass().getResource(soundPackage+soundFile);
-        file = new File(url.getFile());
-        absoluteFilePath = file.getAbsolutePath().replace("%20"," ");
-        highScore = new MP3(absoluteFilePath);
-        
-        
+    private MP3 createMP3(String soundFileName) {
+//        try {
+//            File file = new File(getClass().getClassLoader().getResource(soundPackage+soundFileName).toURI());
+//            System.out.println("createMP3(): "+file.getAbsolutePath());
+        return new MP3(soundFileName);
+//        } catch (URISyntaxException ex) {
+//            Logger.getLogger(HangManForm.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        return null;
     }
-    
+
     /**
-     *This method will start and stop all the sound file to get hem loaded
+     * This Method will get all the necessery sound files from the sound package
      */
-    public void loadAllSoundFiles(){
+    public void getSoundFiles() {
+
+//        String soundFile = "FF_VII_Victory_Fanfare.mp3";
+//        URL url = soundPackage+soundFile);
+//        File file = new File(url.getFile());
+//        String absoluteFilePath = file.getAbsolutePath().replace("%20"," ");
+        victory = createMP3("FF_VII_Victory_Fanfare.mp3");
+        intro = createMP3("intro_2.mp3");
+        battle = createMP3("FF_VII_Battle_Theme.mp3");
+        boss = createMP3("Kingdom_Hearts_FF_VII_One_Winged_Angel.mp3");
+        bossWarning = createMP3("bossstage.mp3");
+        highScore = createMP3("high_score.mp3");
+    }
+
+    /**
+     * This method will start and stop all the sound file to get hem loaded
+     */
+    public void loadAllSoundFiles() {
         victory.play();
         victory.close();
         
@@ -218,23 +191,22 @@ public class HangManForm extends javax.swing.JFrame {
         highScore.close();
         
     }
+
     /**
-     *If you win the game this method will be called then it will call newSecretWord() and resetLabels()
+     * If you win the game this method will be called then it will call
+     * newSecretWord() and resetLabels()
      */
-    public void continueTheGame(){
-        try {
-            
-            newSecretWord();
-            
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
+    public void continueTheGame() {
+        newSecretWord();
+        
         resetLabels();
     }
+
     /**
-     *This method will reset the necessary label for the next stage or for new game. It will also call putTheMogBack();
+     * This method will reset the necessary label for the next stage or for new
+     * game. It will also call putTheMogBack();
      */
-    public void resetLabels(){
+    public void resetLabels() {
         
         numOfTries = 0;
         correctGuess = 0;
@@ -245,59 +217,63 @@ public class HangManForm extends javax.swing.JFrame {
         lblWorngLetters.setText("");
         lblTries.setText("");
         
-        lblScore.setText("Score: "+score);
-        lblStage.setText("Stage: "+stageNum);
+        lblScore.setText("Score: " + score);
+        lblStage.setText("Stage: " + stageNum);
         
         wrongLetters = new ArrayList();
         
-        lblTries.setText("you have used <br>"+numOfTries+"/"+maxTries+" tries");
+        lblTries.setText("you have used <br>" + numOfTries + "/" + maxTries + " tries");
         
         for (int i = 0; i < currentSecretWord.length(); i++) {
-            lblSecretWord.setText(lblSecretWord.getText()+"_ ");
-            secrerWordLetters[i] = currentSecretWord.charAt(i)+"";
+            lblSecretWord.setText(lblSecretWord.getText() + "_ ");
+            secrerWordLetters[i] = currentSecretWord.charAt(i) + "";
             foundLetters[i] = 0;
             //wrongLetters[i] = '';
         }
         
         putTheMogBack();
     }
-    /**
-     *This method will return the moggle picture back to the start point
-     */
-    public void putTheMogBack(){
-        lblMog.setLocation(lblPiranna.getLocation().x,lblPiranna.getLocation().y-100);
-        lblMog.setIcon(new ImageIcon(getClass().getResource(imageFolderPath+imagesMog[0])));
+    
+    private ImageIcon createImageIcon(String fileName) {
+        return new ImageIcon(getClass().getClassLoader().getResource(fileName));
     }
+
     /**
-     *put the images on the labels
+     * This method will return the moggle picture back to the start point
      */
-    public void putImagesOnLabels(){
+    public void putTheMogBack() {
+        lblMog.setLocation(lblPiranna.getLocation().x, lblPiranna.getLocation().y - 100);
+//        lblMog.setIcon(new ImageIcon(imageFolderPath+imagesMog[0]));
+        lblMog.setIcon(createImageIcon(imageFolderPath + imagesMog[0]));
+    }
+
+    /**
+     * put the images on the labels
+     */
+    public void putImagesOnLabels() {
         
         lblMog.setText("");
         lblPiranna.setText("");
         
-        String imagesMog[] = {"Mog_1.gif","Mog_2.gif","Mog_2.gif","Mog_3.gif","Mog_3.gif"};
+        String imagesMog[] = {"Mog_1.gif", "Mog_2.gif", "Mog_2.gif", "Mog_3.gif", "Mog_3.gif"};
         String imagePiranna = "Piranha.gif";
-        String imageFolderPath = "../images/";
         
-        lblMog.setIcon(new ImageIcon(getClass().getResource(imageFolderPath+imagesMog[0])));
-        lblPiranna.setIcon(new ImageIcon(getClass().getResource(imageFolderPath+imagePiranna)));
+        lblMog.setIcon(createImageIcon(imageFolderPath + imagesMog[0]));
+        lblPiranna.setIcon(createImageIcon(imageFolderPath + imagePiranna));
         
     }
+
     /**
-     *This method will restart the game, it will call newSecretWord(), resetLabels(), putTheMogBack() and enableButtons()
+     * This method will restart the game, it will call newSecretWord(),
+     * resetLabels(), putTheMogBack() and enableButtons()
      */
-    public void restart(){
+    public void restart() {
         theBossHasCome = false;
         continuePlaying = true;
         score = 0;
         stageNum = 1;
         
-        try {
-            newSecretWord();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
+        newSecretWord();
         
         resetLabels();
         putTheMogBack();
@@ -305,243 +281,241 @@ public class HangManForm extends javax.swing.JFrame {
         
         btnRestart.setEnabled(false);
     }
+
     /**
-     *This method will get the new secret word
+     * This method will get the new secret word
      */
-    public void newSecretWord() throws SQLException{
-        if(!theBossHasCome){
+    public void newSecretWord() {
+        if (!theBossHasCome) {
             rand = new Random();
-            if(secretWords == null)
+            if (secretWords == null) {
                 secretWords = mng.getAllSecretWords();
+            }
             
             int randomNumber = rand.nextInt(secretWords.size());
             currentSecretWord = secretWords.get(randomNumber);
             secretWords.remove(randomNumber);
-        }else{
-            System.out.println("stageNum: "+stageNum);
+        } else {
+            System.out.println("stageNum: " + stageNum);
             currentSecretWord = mng.getTheBoss(stageNum);
         }
-        System.out.println("The current secret word is: "+currentSecretWord+
-                ", and it's length is: "+currentSecretWord.length());
+        System.out.println("The current secret word is: " + currentSecretWord
+                + ", and it's length is: " + currentSecretWord.length());
         
         secrerWordLetters = new String[currentSecretWord.length()];
         foundLetters = new int[currentSecretWord.length()];
         
         
     }
+
     /**
-     *This method will get the top ten scores from the DB
+     * This method will get the top ten scores from the DB
      */
-    public String getTopTenScores(){
+    public String getTopTenScores() {
         String toPrint = "";
         int USER_NAME = 0;
         int USER_SCORE = 1;
-        try {
-            
-            String[][] scores = mng.getTopTenScores();
-            toPrint = "<html><table aling = \"center\">";
-            toPrint += "<tr>" +
-                    "<th>User Name</th>" +
-                    "<th>Score</th>" +
-                    "</tr>" +
-                    "<tr>" +
-                    "<th></th>" +
-                    "<th></th>" +
-                    "</tr>" +
-                    "";
-            for (int i = 0; i < scores.length; i++) {
-                toPrint += "<tr>" +
-                        "<td>"+scores[i][USER_NAME]+"</td>" +
-                        "<td>"+scores[i][USER_SCORE]+"</td>" +
-                        "</tr>";
-            }
-            toPrint += "</html>";
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+        
+        
+        String[][] scores = mng.getTopTenScores();
+        toPrint = "<html><table aling = \"center\">";
+        toPrint += "<tr>"
+                + "<th>User Name</th>"
+                + "<th>Score</th>"
+                + "</tr>"
+                + "<tr>"
+                + "<th></th>"
+                + "<th></th>"
+                + "</tr>"
+                + "";
+        for (int i = 0; i < scores.length; i++) {
+            toPrint += "<tr>"
+                    + "<td>" + scores[i][USER_NAME] + "</td>"
+                    + "<td>" + scores[i][USER_SCORE] + "</td>"
+                    + "</tr>";
         }
+        toPrint += "</html>";
         return toPrint;
     }
+
     /**
-     *This method will recieve the letter from the button in the keyboardPanel and check it against the secret word
-     *this method will call reprintLabels()
-     *@Parameters
-     *char letter: this will be recieved from the pressed button
+     * This method will recieve the letter from the button in the keyboardPanel
+     * and check it against the secret word this method will call
+     * reprintLabels()
+     *
+     * @Parameters char letter: this will be recieved from the pressed button
      */
-    public void checkButtonPressed(char letter){
-        System.out.println("CheckingButtonPressed: "+letter);
+    public void checkButtonPressed(char letter) {
+        System.out.println("CheckingButtonPressed: " + letter);
         numOfTries++;
-        System.out.println("numOfTries: "+numOfTries);
+        System.out.println("numOfTries: " + numOfTries);
         boolean correctAnswer = false;
         for (int i = 0; i < currentSecretWord.length(); i++) {
             
-            if(secrerWordLetters[i].equalsIgnoreCase(letter+"")){
+            if (secrerWordLetters[i].equalsIgnoreCase(letter + "")) {
                 correctGuess++;
                 foundLetters[i] = 1;
                 correctAnswer = true;
             }
         }
-        if(correctAnswer){
+        if (correctAnswer) {
             System.out.println("Correct Answer!!");
             numOfTries--;
-        }else{
+        } else {
             int location = 10;
-            while (location != 0){
+            while (location != 0) {
                 try {
                     Thread.currentThread().sleep(10);
                 } catch (InterruptedException ex) {
                     ex.printStackTrace();
                 }
-                lblMog.setLocation(lblMog.getLocation().x,lblMog.getLocation().y + 2);
+                lblMog.setLocation(lblMog.getLocation().x, lblMog.getLocation().y + 2);
                 location--;
             }
             wrongLetters.add(letter);
         }
         reprintLabels();
     }
+
     /**
-     *This method will reprint the labels in the gamePanel depending on the game status. this method will call chackGameStatus()
+     * This method will reprint the labels in the gamePanel depending on the
+     * game status. this method will call chackGameStatus()
      */
-    public void reprintLabels(){
+    public void reprintLabels() {
         System.out.println("reprintSecretWord");
         
         lblSecretWord.setText("");
         for (int i = 0; i < currentSecretWord.length(); i++) {
-            if(foundLetters[i] == 0){
-                lblSecretWord.setText(lblSecretWord.getText()+"_ ");
-            }else{
-                lblSecretWord.setText(lblSecretWord.getText()+secrerWordLetters[i]);
+            if (foundLetters[i] == 0) {
+                lblSecretWord.setText(lblSecretWord.getText() + "_ ");
+            } else {
+                lblSecretWord.setText(lblSecretWord.getText() + secrerWordLetters[i]);
             }
         }
         
         lblWorngLetters.setText("");
         for (Object elem : wrongLetters) {
-            lblWorngLetters.setText(lblWorngLetters.getText()+" "+elem.toString());
+            lblWorngLetters.setText(lblWorngLetters.getText() + " " + elem.toString());
         }
         
-        if(numOfTries != 0){
-            lblMog.setIcon(new ImageIcon(getClass().getResource(imageFolderPath+imagesMog[numOfTries-1])));
+        if (numOfTries != 0) {
+            lblMog.setIcon(createImageIcon(imageFolderPath + imagesMog[numOfTries - 1]));
         }
         
-        lblTries.setText("you have used <br>"+numOfTries+"/"+maxTries+" tries");
-        lblScore.setText("Score: "+score);
+        lblTries.setText("you have used <br>" + numOfTries + "/" + maxTries + " tries");
+        lblScore.setText("Score: " + score);
         
-        System.out.println("secretWord status: "+lblSecretWord.getText());
+        System.out.println("secretWord status: " + lblSecretWord.getText());
         checkGameStatus();
     }
+
     /**
-     *This method will check is finished or not. if the game is finished, if will check if the player win or lose
-     *This method will call several mothods depending on the game status
-     *- win:  play the victory sound file, it will also check the Boss stage
-     *- lose: will check if the score is new high score and invoke gameOver()
+     * This method will check is finished or not. if the game is finished, if
+     * will check if the player win or lose This method will call several
+     * mothods depending on the game status - win: play the victory sound file,
+     * it will also check the Boss stage - lose: will check if the score is new
+     * high score and invoke gameOver()
      */
-    public void checkGameStatus(){
+    public void checkGameStatus() {
         System.out.println("checkGameStatus");
         boolean win = true;
         boolean gameFinished = false;
-        if(numOfTries == maxTries || correctGuess == foundLetters.length){
+        if (numOfTries == maxTries || correctGuess == foundLetters.length) {
             
             gameFinished = true;
             btnRestart.setEnabled(true);
             
             for (int i = 0; i < foundLetters.length; i++) {
-                if(foundLetters[i] == 0){
+                if (foundLetters[i] == 0) {
                     win = false;
                     break;
                 }
             }
-            if(gameFinished){
-                if(win){
+            if (gameFinished) {
+                if (win) {
                     stageNum++;
                     lblMsg.setText("Congrats");
                     lblSecretWord.setText(currentSecretWord);
                     
-                    if(numOfTries == 0){
+                    if (numOfTries == 0) {
                         numOfTries = 1;
-                        bonus = currentSecretWord.length()*10;
+                        bonus = currentSecretWord.length() * 10;
                         lblMsg.setText("Perfect!!");
                     }
                     
-                    score += currentSecretWord.length()*10/numOfTries+bonus;
-                    lblScore.setText("Score: "+score);
+                    score += currentSecretWord.length() * 10 / numOfTries + bonus;
+                    lblScore.setText("Score: " + score);
                     //disableButtons();
                     
                     
                     playSoundFile(VICTORY);
                     
-                    JOptionPane.showOptionDialog
-                            (null,"You won! click OK for the next stage","Save The Moggle The Game",JOptionPane.YES_OPTION,
-                            JOptionPane.INFORMATION_MESSAGE,null,null,null);
+                    JOptionPane.showOptionDialog(null, "You won! click OK for the next stage", "Save The Moggle The Game", JOptionPane.YES_OPTION,
+                            JOptionPane.INFORMATION_MESSAGE, null, null, null);
                     
-                    if(stageNum == 5){
+                    if (stageNum == 5) {
                         /*get the boss*/
                         theBossHasCome = true;
                         playSoundFile(BOSSWARNING);
-                        JOptionPane.showOptionDialog
-                                (null,"The boss has come","Save The Moggle The Game",JOptionPane.YES_OPTION,
-                                JOptionPane.INFORMATION_MESSAGE,null,null,null);
+                        JOptionPane.showOptionDialog(null, "The boss has come", "Save The Moggle The Game", JOptionPane.YES_OPTION,
+                                JOptionPane.INFORMATION_MESSAGE, null, null, null);
                         playSoundFile(BOSS);
                         continueTheGame();
-                    }else if(stageNum < 5){
+                    } else if (stageNum < 5) {
                         System.out.println("continue the battle");
                         playSoundFile(BATTLE);
                         continueTheGame();
-                    }else if(stageNum > 5){
-                        JOptionPane.showOptionDialog
-                                (null,"You beat the boss and saved the moggle, thank you for playing","Save The Moggle The Game",JOptionPane.YES_OPTION,
-                                JOptionPane.INFORMATION_MESSAGE,null,null,null);
+                    } else if (stageNum > 5) {
+                        JOptionPane.showOptionDialog(null, "You beat the boss and saved the moggle, thank you for playing", "Save The Moggle The Game", JOptionPane.YES_OPTION,
+                                JOptionPane.INFORMATION_MESSAGE, null, null, null);
                         gameOver();
                     }
                     
                     stopSoundFiles();
                     
                     enableButtons();
-                }else{
+                } else {
                     gameOver();
                 }
             }
         }
     }
-    
+
     /**
-     *This method will be invoked if the player lose the game or beat the boss
+     * This method will be invoked if the player lose the game or beat the boss
      */
-    public void gameOver(){
+    public void gameOver() {
         lblMsg.setText("Game Over");
         lblSecretWord.setText(currentSecretWord);
-        score -= currentSecretWord.length()*5/numOfTries;
-        if(score < 0){
+        score -= currentSecretWord.length() * 5 / numOfTries;
+        if (score < 0) {
             score = 0;
         }
-        lblScore.setText("Score: "+score);
+        lblScore.setText("Score: " + score);
         disableButtons();
         continuePlaying = false;
-        try {
-            
-            if(mng.isNewHighScore(score)){
-                String playerName = JOptionPane.showInputDialog("You got new high score!! Enter your name","Player");
-                mng.addNewHighScore(playerName,score);
-            }
-            
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+        
+        
+        if (mng.isNewHighScore(score)) {
+            String playerName = JOptionPane.showInputDialog("You got new high score!! Enter your name", "Player");
+            mng.addNewHighScore(playerName, score);
         }
         
         
-        int choice = JOptionPane.showOptionDialog
-                (null,"Game Over! Play Again?","Save The Moggle The Game",JOptionPane.YES_NO_OPTION,
-                JOptionPane.INFORMATION_MESSAGE,null,null,null);
+        int choice = JOptionPane.showOptionDialog(null, "Game Over! Play Again?", "Save The Moggle The Game", JOptionPane.YES_NO_OPTION,
+                JOptionPane.INFORMATION_MESSAGE, null, null, null);
         
-        if(choice == 0){
+        if (choice == 0) {
             restart();
-        }else{
+        } else {
             btnMainMenu.doClick();
         }
     }
-    
+
     /**
-     *This method will disable all the keyboardPanel buttons
+     * This method will disable all the keyboardPanel buttons
      */
-    public void disableButtons(){
+    public void disableButtons() {
         // <editor-fold defaultstate="collapsed" desc=" comminted code">
 //        btnA.setEnabled(false);
 //        btnB.setEnabled(false);
@@ -574,116 +548,116 @@ public class HangManForm extends javax.swing.JFrame {
             keyBoardBtns[i].setEnabled(false);
         }
     }
-    
+
     /**
-     *This method will enable all the keyboardPanel buttons
+     * This method will enable all the keyboardPanel buttons
      */
-    public void enableButtons(){
+    public void enableButtons() {
         // <editor-fold defaultstate="collapsed" desc=" comminted code">
         /*
-        btnA.setEnabled(true);
-        btnB.setEnabled(true);
-        btnC.setEnabled(true);
-        btnD.setEnabled(true);
-        btnE.setEnabled(true);
-        btnF.setEnabled(true);
-        btnG.setEnabled(true);
-        btnH.setEnabled(true);
-        btnI.setEnabled(true);
-        btnJ.setEnabled(true);
-        btnK.setEnabled(true);
-        btnL.setEnabled(true);
-        btnM.setEnabled(true);
-        btnN.setEnabled(true);
-        btnO.setEnabled(true);
-        btnP.setEnabled(true);
-        btnQ.setEnabled(true);
-        btnR.setEnabled(true);
-        btnS.setEnabled(true);
-        btnT.setEnabled(true);
-        btnU.setEnabled(true);
-        btnV.setEnabled(true);
-        btnW.setEnabled(true);
-        btnX.setEnabled(true);
-        btnY.setEnabled(true);
-        btnZ.setEnabled(true);
+         btnA.setEnabled(true);
+         btnB.setEnabled(true);
+         btnC.setEnabled(true);
+         btnD.setEnabled(true);
+         btnE.setEnabled(true);
+         btnF.setEnabled(true);
+         btnG.setEnabled(true);
+         btnH.setEnabled(true);
+         btnI.setEnabled(true);
+         btnJ.setEnabled(true);
+         btnK.setEnabled(true);
+         btnL.setEnabled(true);
+         btnM.setEnabled(true);
+         btnN.setEnabled(true);
+         btnO.setEnabled(true);
+         btnP.setEnabled(true);
+         btnQ.setEnabled(true);
+         btnR.setEnabled(true);
+         btnS.setEnabled(true);
+         btnT.setEnabled(true);
+         btnU.setEnabled(true);
+         btnV.setEnabled(true);
+         btnW.setEnabled(true);
+         btnX.setEnabled(true);
+         btnY.setEnabled(true);
+         btnZ.setEnabled(true);
          */
         // </editor-fold>
         for (int i = 0; i < keyBoardBtns.length; i++) {
             keyBoardBtns[i].setEnabled(true);
         }
     }
-    
+
     /**
-     *This method will reviece an integer and play a sound file according to the integer. it will invoke 
-     * the stopSoundFiles() before playing any sound file
-     *@Parameter:
-     *int soundFileNumber: will represent on of this values
-     *  int VICTORY = 0;
-     *  int INTRO = 1;
-     *  int BATTLE = 2;
-     *  int BOSS = 3;
-     *  int BOSSWARNING = 4;
-     *  int HIGHSCORE = 5;
+     * This method will reviece an integer and play a sound file according to
+     * the integer. it will invoke the stopSoundFiles() before playing any sound
+     * file
+     *
+     * @Parameter: int soundFileNumber: will represent on of this values int
+     * VICTORY = 0; int INTRO = 1; int BATTLE = 2; int BOSS = 3; int BOSSWARNING
+     * = 4; int HIGHSCORE = 5;
      */
-    public void playSoundFile(int soundFileNumber){
+    public void playSoundFile(int soundFileNumber) {
         
         stopSoundFiles();
-        
+
         //getSoundFiles();
         
-        if(soundFileNumber == VICTORY){
+        if (soundFileNumber == VICTORY) {
             victory.play();
         }
-        if(soundFileNumber == BATTLE){
+        if (soundFileNumber == BATTLE) {
             battle.play();
         }
-        if(soundFileNumber == INTRO){
+        if (soundFileNumber == INTRO) {
             intro.play();
         }
-        if(soundFileNumber == BOSS){
+        if (soundFileNumber == BOSS) {
             boss.play();
         }
-        if(soundFileNumber == BOSSWARNING){
+        if (soundFileNumber == BOSSWARNING) {
             bossWarning.play();
         }
-        if(soundFileNumber == HIGHSCORE){
+        if (soundFileNumber == HIGHSCORE) {
             highScore.play();
         }
         
     }
+
     /**
-     *This method will stop all the playing sound files
+     * This method will stop all the playing sound files
      */
-    public void stopSoundFiles(){
+    public void stopSoundFiles() {
         
-        if(victory.isPlayingNow()){
+        if (victory.isPlayingNow()) {
             victory.close();
         }
-        if(intro.isPlayingNow()){
+        if (intro.isPlayingNow()) {
             intro.close();
         }
-        if(battle.isPlayingNow()){
+        if (battle.isPlayingNow()) {
             battle.close();
         }
-        if(boss.isPlayingNow()){
+        if (boss.isPlayingNow()) {
             boss.close();
         }
-        if(bossWarning.isPlayingNow()){
+        if (bossWarning.isPlayingNow()) {
             bossWarning.close();
         }
-        if(highScore.isPlayingNow()){
+        if (highScore.isPlayingNow()) {
             highScore.close();
         }
         
     }
+
     /**
-     *This methos will set all the panels visiblity to false and set the gamePanel visiblity to true
+     * This methos will set all the panels visiblity to false and set the
+     * gamePanel visiblity to true
      */
-    public void showGamePanel(){
-        if(theBossHasCome){
+    public void showGamePanel() {
+        if (theBossHasCome) {
             playSoundFile(BOSS);
-        }else{
+        } else {
             playSoundFile(BATTLE);
         }
         panelMainMenu.setVisible(false);
@@ -695,10 +669,12 @@ public class HangManForm extends javax.swing.JFrame {
         panelGameBackground.setVisible(true);
         
     }
+
     /**
-     *This methos will set all the panels visiblity to false and set the mainMenuPanel visiblity to true
+     * This methos will set all the panels visiblity to false and set the
+     * mainMenuPanel visiblity to true
      */
-    public void showMainMenuPanel(){
+    public void showMainMenuPanel() {
         
         playSoundFile(INTRO);
         
@@ -711,10 +687,12 @@ public class HangManForm extends javax.swing.JFrame {
         panelGameBackground.setVisible(false);
         
     }
+
     /**
-     *This methos will set all the panels visiblity to false and set the highScorePanel visiblity to true
+     * This methos will set all the panels visiblity to false and set the
+     * highScorePanel visiblity to true
      */
-    public void showHighScorePanel(){
+    public void showHighScorePanel() {
         
         playSoundFile(HIGHSCORE);
         
@@ -727,10 +705,12 @@ public class HangManForm extends javax.swing.JFrame {
         panelGameBackground.setVisible(false);
         
     }
+
     /**
-     *This method will add the action listener to all buttons in the keyBoardPanel
+     * This method will add the action listener to all buttons in the
+     * keyBoardPanel
      */
-    public void addActionListenerToAllKeyboardButtons(){
+    public void addActionListenerToAllKeyboardButtons() {
         for (int i = 0; i < keyBoardBtns.length; i++) {
             keyBoardBtns[i].addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -739,23 +719,24 @@ public class HangManForm extends javax.swing.JFrame {
             });
         }
     }
+
     /**
-     *This is the action listener for all buttons in the keyBoardPanel
+     * This is the action listener for all buttons in the keyBoardPanel
      */
     private void btnActionPerformed(java.awt.event.ActionEvent evt) {
         for (int i = 0; i < keyBoardBtns.length; i++) {
-            if(keyBoardBtns[i].equals(evt.getSource())){
-                System.out.println("btn "+keyBoardBtns[i].getText()+" in btnActionPerformed pressed!!");
+            if (keyBoardBtns[i].equals(evt.getSource())) {
+                System.out.println("btn " + keyBoardBtns[i].getText() + " in btnActionPerformed pressed!!");
                 keyBoardBtns[i].setEnabled(false);
                 checkButtonPressed(keyBoardBtns[i].getText().charAt(0));
             }
         }
     }
-    
-    /** This method is called from within the constructor to
-     * initialize the form.
-     * WARNING: Do NOT modify this code. The content of this method is
-     * always regenerated by the Form Editor.
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
      */
     // <editor-fold defaultstate="collapsed" desc=" Generated Code ">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -1302,8 +1283,9 @@ public class HangManForm extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
     /**
-     *This is the action listener for btnHighScore
+     * This is the action listener for btnHighScore
      */
     private void btnHighScoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHighScoreActionPerformed
         showHighScorePanel();
@@ -1311,45 +1293,44 @@ public class HangManForm extends javax.swing.JFrame {
         lblHighScore.setText(top10);
     }//GEN-LAST:event_btnHighScoreActionPerformed
     /**
-     *This is the action listener for btnExit
+     * This is the action listener for btnExit
      */
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
         System.exit(0);
     }//GEN-LAST:event_btnExitActionPerformed
     /**
-     *This is the action listener for btnStart
+     * This is the action listener for btnStart
      */
     private void btnStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStartActionPerformed
-        if(continuePlaying){
-            if(JOptionPane.showOptionDialog
-                    (null,"There is an incompleted game! Do you want to continue? \n" +
-                    "    (\"Yes\" to continue, \"No\" to start new game)","Save The Moggle The Game",JOptionPane.YES_NO_OPTION,
-                    JOptionPane.WARNING_MESSAGE,null,null,null)
-                    == 1){
+        if (continuePlaying) {
+            if (JOptionPane.showOptionDialog(null, "There is an incompleted game! Do you want to continue? \n"
+                    + "    (\"Yes\" to continue, \"No\" to start new game)", "Save The Moggle The Game", JOptionPane.YES_NO_OPTION,
+                    JOptionPane.WARNING_MESSAGE, null, null, null)
+                    == 1) {
                 restart();
             }
-        }else{
+        } else {
             restart();
         }
         showGamePanel();
         
     }//GEN-LAST:event_btnStartActionPerformed
     /**
-     *This is the action listener for btnMainMenu
+     * This is the action listener for btnMainMenu
      */
     private void btnMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainMenuActionPerformed
 // TODO add your handling code here:
         showMainMenuPanel();
     }//GEN-LAST:event_btnMainMenuActionPerformed
     /**
-     *This is the action listener for btnRestart
+     * This is the action listener for btnRestart
      */
     private void btnRestartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestartActionPerformed
         // TODO add your handling code here:
         System.out.println("btn Restart pressed!!");
         restart();
     }//GEN-LAST:event_btnRestartActionPerformed
-    
+
     /**
      * @param args the command line arguments
      */
@@ -1362,7 +1343,6 @@ public class HangManForm extends javax.swing.JFrame {
             }
         });
     }
-    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnA;
     private javax.swing.JButton btnB;
@@ -1417,5 +1397,4 @@ public class HangManForm extends javax.swing.JFrame {
     private javax.swing.JPanel panelMainMenu;
     private javax.swing.JPanel panelMainMenuBackground;
     // End of variables declaration//GEN-END:variables
-    
 }

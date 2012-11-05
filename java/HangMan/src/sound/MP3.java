@@ -23,17 +23,26 @@ import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 
 import helperClasses.Player;
+import java.io.File;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class MP3 {
     private String filename;
+    private File media;
     private Player player;
     private boolean stop;
     private boolean playingNow;
     
     // constructor that takes the name of an MP3 file
     public MP3(String filename) {
+//        this(new File(filename));
         this.filename = filename;
+    }
+
+    public MP3(File file) {
+        this.media = file;
         stop = false;
         setPlayingNow(false);
     }
@@ -54,12 +63,13 @@ public class MP3 {
         System.out.println("stop: "+stop);
         setPlayingNow(true);
         try {
-            FileInputStream fis     = new FileInputStream(filename);
-            BufferedInputStream bis = new BufferedInputStream(fis);
-            player = new Player(bis);
+//            System.out.println("File.exists(): "+media.exists());
+            
+//            FileInputStream fis     = new FileInputStream(media);
+//            BufferedInputStream bis = new BufferedInputStream(fis);
+            player = new Player(this.getClass().getResourceAsStream(filename));
         } catch (Exception e) {
-            System.out.println("Problem playing file " + filename);
-            System.out.println(e);
+            Logger.getLogger(MP3.class.getName()).log(Level.SEVERE, null, e);
         }
         
         // run in new thread to play in background
@@ -78,7 +88,9 @@ public class MP3 {
                         play();
                     }
                     
-                } catch (Exception e) { System.out.println(e); }
+                } catch (Exception e) { 
+                    Logger.getLogger(MP3.class.getName()).log(Level.SEVERE, null, e);
+                }
             }
         }.start();
         

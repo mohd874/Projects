@@ -14,12 +14,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author S200200874
  */
-public class JDBCManager {
+public class JDBCManager implements WordsManager, ScoreManager{
     Connection conn = null;
     PreparedStatement stm = null;
     ResultSet res = null;
@@ -33,7 +35,16 @@ public class JDBCManager {
         return conn.prepareStatement(sqlQuery);
     }
     
-    public String[][] getTopTenScores() throws SQLException{
+    public String[][] getTopTenScores(){
+        try {
+            return getTopTenScoresFromDB();
+        } catch (SQLException ex) {
+            Logger.getLogger(JDBCManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+    
+    private String[][] getTopTenScoresFromDB() throws SQLException{
         int recordsLimit = 10;
         String query = "select top 10 player,score from " +
                 "(select * from tblGame order by score desc) x order by x.score desc";
@@ -55,7 +66,16 @@ public class JDBCManager {
         return scores;
     }
     
-    public String getTheBoss(int bossLvl) throws SQLException{
+    public String getTheBoss(int bossLvl){
+        try {
+            return getTheBossFromDB(bossLvl);
+        } catch (SQLException ex) {
+            Logger.getLogger(JDBCManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+    
+    private String getTheBossFromDB(int bossLvl) throws SQLException{
         
         String query = "select * from secret_words where boss_lvl = ?";
         stm = createPreparedStatement(query);
@@ -70,7 +90,15 @@ public class JDBCManager {
         return boss;
     }
     
-    public ArrayList<String> getAllSecretWords() throws SQLException{
+    public ArrayList<String> getAllSecretWords(){
+        try {
+            return getAllSecretWordsFromDB();
+        } catch (SQLException ex) {
+            Logger.getLogger(JDBCManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+    private ArrayList<String> getAllSecretWordsFromDB() throws SQLException{
         String query = "SELECT * from secret_words where boss_lvl = 0";
         stm = createPreparedStatement(query);
         
@@ -85,7 +113,16 @@ public class JDBCManager {
         return secretWords;
     }
     
-    public boolean isNewHighScore(int newScore) throws SQLException{
+    public boolean isNewHighScore(int newScore){
+        try {
+            return isNewHighScoreFromDB(newScore);
+        } catch (SQLException ex) {
+            Logger.getLogger(JDBCManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
+    
+    private boolean isNewHighScoreFromDB(int newScore) throws SQLException{
         String[][] scores = getTopTenScores();
         
         for (int i = 0; i < scores.length; i++) {
@@ -100,7 +137,18 @@ public class JDBCManager {
         return false;
     }
     
-    public void addNewHighScore(String playerName, int newScore) throws SQLException{
+    public boolean addNewHighScore(String playerName, int newScore){
+        try {
+            addNewHighScoreToDB(playerName, newScore);
+            return true;
+        } catch (SQLException ex) {
+            Logger.getLogger(JDBCManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return false;
+    }
+    
+    private void addNewHighScoreToDB(String playerName, int newScore) throws SQLException{
         String query = "insert into tblGame(player,score) values(?,?)";
         stm = createPreparedStatement(query);
         stm.setString(1,playerName);
